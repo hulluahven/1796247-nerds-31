@@ -1,7 +1,7 @@
 # Личный проект «Нёрдс»
 
 * Студент: [Роман Калугин](https://up.htmlacademy.ru/htmlcss/31/user/1796247).
-* Наставник:[Виктория Никитина](https://htmlacademy.ru/profile/id1217273).
+* Наставник:[Виктория "Наставник" Никитина](https://htmlacademy.ru/profile/id1217273).
 
 ---
 
