@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>HTML Academy: Нёрдс</title>
+</head>
+  <body>
+    <header>
+      <nav>
+      <a href="index.html">
+      <img src="https://via.placeholder.com/150x100" alt="Логотип интренет-магазина Нёрдс">
+      </a>
+      <ul>
+      <li><a href="index.html">Студия</a></li>
+      <li><a href="blank.html">Клиенты</a></li>
+      <li><a href="#">Магазин</a></li>
+      <li><a href="blank.html">Контакты</a></li>
+      </ul>
+      <a href="blank.html">Корзина</a>
+      </nav>
+    </header>
+    <main>
+      <h1>Магазин готовых шаблонов</h1>
+      <section>
+        <h2>Фильтр товаров</h2>
+        <form method="GET" action="https://echo.htmlacademy.ru">
+          <fieldset>
+            <legend> Сортировать:</legend>
+            <span class="sort" rel="price">По цене</span><!--На хабаре пишут, что можно написать так и потом добавить JS(https://habr.com/ru/post/130911/)-->
+            <span class="sort" rel="type">По типу</span>
+            <span class="sort" rel="name">По названию</span>
+          </fieldset>
+          <!--Здесь еще должны быть переключатели-треугольники-->
+
+          <fieldset>
+            <legend>Стоимость:</legend>
+            <!--Здесь должен быть ползунок. Я так понял что он на JS делается потом-->
+            <label>от<input type="text" name="price" value="5 000"></label>
+            <label>до<input type="text" name="price" value="15 000"></label>
+          </fieldset>
+          <fieldset>
+            <legend>Сетка:</legend><!--Вроде-бы всё правильно написал, но TAB-ом ходить не получается по этому фильтру. Почему-не понял -->
+            <ul>
+              <li>
+                <input type="radio" name="grid" value="adaptive" id="filter-adaptive">
+                <label for="filter-adaptive">Адаптивная</label>
+              </li>
+              <li>
+                <input type="radio" name="grid" value="static" id="filter-static">
+                <label for="filter-static">Фиксированная</label>
+              </li>
+              <li>
+                <input type="radio" name="grid" value="stretch" id="filter-stretch">
+                <label for="filter-stretch">Резиновая</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Особенности:</legend>
+            <ul>
+              <li>
+                <input type="checkbox" name="slider" id="filter-slider" checked>
+                <label for="filter-slider">Слайдер</label>
+              </li>
+              <li>
+                <input type="checkbox" name="features" id="filter-features">
+                <label for="filter-features">Блок преимуществ</label>
+              </li>
+              <li>
+                <input type="checkbox" name="news" id="filter-news" checked>
+                <label for="filter-news">Новости</label>
+              </li>
+              <li>
+                <input type="checkbox" name="galery" id="filter-galery">
+                <label for="filter-galery">Галерея</label>
+              </li>
+              <li>
+                <input type="checkbox" name="cart" id="filter-cart">
+                <label for="filter-cart">Корзина</label>
+              </li>
+            </ul>
+          </fieldset>
+          <button type="submit">Показать</button>
+        </form>
+      </section>
+      <section>
+        <h2>Наши работы</h2>
+          <ul>
+            <li>
+              <figure>
+                <img src="https://via.placeholder.com/150x100" alt="Информационный сайт для туристов.">
+              </figure>
+              <a href="blank.html"><!--Не уверен, что правильно обернуть это ссылкой, но по стаилгайду похоже так.-->
+                <h3>Sedona</h3>
+                <p>Информационный сайт для туристов</p>
+              </a>
+              <p>
+                <button type="button">9 900 ₽</button>
+              </p>
+            </li>
+            <li>
+              <figure>
+                <img src="https://via.placeholder.com/150x100" alt="Продуктовый лендинг приложений для iOS и Android.">
+              </figure>
+              <a href="blank.html">
+                <h3>Pink app</h3>
+                <p>Продуктовый лендинг приложений для iOS и Android</p>
+              </a>
+              <p>
+                <button type="button">9 900 ₽</button>
+              </p>
+            </li>
+              <li>
+              <figure>
+                <img src="https://via.placeholder.com/150x100" alt="Сайт салона красоты для мужчин.">
+              </figure>
+              <a href="blank.html">
+                <h3>Barbershop</h3>
+                <p>Сайт салона красоты. Для мужчин, да.</p>
+              </a>
+              <p>
+                <button type="button">9 900 ₽</button>
+              </p>
+            </li>
+            <li>
+              <figure>
+                <img src="https://via.placeholder.com/150x100" alt="Интернет-магазин вязаных игрушек">
+              </figure>
+              <a href="blank.html">
+                <h3>Mishka</h3>
+                <p>Интернет-магазин вязаных игрушек</p>
+              </a>
+              <p>
+                <button type="button">9 900 ₽</button>
+              </p>
+            </li>
+            <li>
+              <figure>
+                <img src="https://via.placeholder.com/150x100" alt="Лендинг курсов повышения квалификации">
+              </figure>
+              <a href="blank.html">
+                <h3>A Plus</h3>
+                <p>Лендинг курсов повышения квалификации</p>
+              </a>
+              <p>
+                <button type="button">9 900 ₽</button>
+              </p>
+            </li>
+            <li>
+              <figure>
+                <img src="https://via.placeholder.com/150x100" alt="Промо-сайт производителя крафтового кваса">
+              </figure>
+              <a href="blank.html">
+                <h3>Кваст</h3>
+                <p>Промо-сайт производителя крафтового кваса</p>
+              </a>
+              <p>
+                <button type="button">9 900 ₽</button>
+              </p>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a>1</a>
+            </li>
+            <li>
+              <a href="blank.html">2</a>
+            </li>
+            <li>
+              <a href="blank.html">3</a>
+            </li>
+            <li>
+              <a href="blank.html">Следующая</a>
+            </li>
+          </ul>
+        </section>
+    </main>
+    <footer>
+      <h2>Наши контакты</h2>
+      <figure>
+        <img src="https://via.placeholder.com/150x100" alt="Карта">
+      </figure>
+      <p>
+      Nёrds design studio <br>
+      наб. Реки Карповки,<br>
+      5 лит.П, Санкт-Петербург<br>
+      <a href="tel:+7800555-86-28">+7800 555-86-28</a><br>
+      <a href="blank.html">Напишите нам</a>
+      </p> 
+      <h2>Давайте дружить, это выгодно!</h2>
+        <p>Скидка 10% для друзей из социальных сетей</p>
+      <ul>
+        <li><a href="#">Вконтакте</a></li>
+        <li><a href="#">Фейсбук</a></li>
+        <li><a href="#">Инстаграмм</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>
+
