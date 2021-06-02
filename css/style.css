@@ -1,0 +1,255 @@
+/* Variables */
+:root{
+   --button-red-rest:#FB565A;
+   --button-red-hover:#E74246;
+   --button-red-active:#D7373B;
+   --button-green-rest:#00CA74;
+   --button-green-hover:#00BC6C;
+   --button-green-active:#00AA62;
+   --button-yellow-rest:#EFC849;
+   --button-yellow-hover:#EAB534;
+   --button-yellow-active:#E5A722;
+   --filter-buttons-rest:#EEEEEE;
+   --filter-buttons-hover:#DFDFDF;
+   --filter-buttons-active:#D5D5D5;
+   --pagination-rest:#EEEEEE;
+   --pagination-hover:#DFDFDF;
+   --pagination-active:#D5D5D5;
+	 --text-basic:#283136;
+   --text-add: #000000;
+   --address:#666666;
+   --button-link-know:#ffffff;
+}
+/* Global */
+/* Как лучше сделать стилизацию слайдеров, в плане background-color? Или это позже? */
+.page-body{
+  min-width: 960px;
+  margin: 0;
+  padding: 0;
+  font-family:"Roboto", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: var(--text-basic);
+}
+/* Нужно ли прописывать название шрифта для каждого элемента или достаточно задать в body? */
+
+.main-nav{
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 500;
+  color: var(--text-basic);
+  background-color: transparent;
+}
+.nav-list{
+  list-style: none;
+}
+.nav-link{
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 500;
+  color: var(--text-basic);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.nav-link:hover,
+.nav-link:focus{
+  color:var(--button-red-rest);
+}
+.nav-link:active{
+  color: var(--text-basic);
+  text-decoration: underline;
+  text-decoration-color: var(--button-red-rest);
+}
+/* правильно ли так написать правило для ссылки на страницу, на которой находимся? или это вообще лишнее сейчас? */
+.nav-cart{
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 500;
+  color: var(--text-basic);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.nav-cart:hover,
+.nav-cart:focus{
+  color:var(--button-red-rest);
+}
+.nav-cart:active{
+  color: var(--text-basic);
+  text-decoration: underline;
+  text-decoration-color: var(--button-red-rest);
+}
+.slider-list{
+  list-style: none;
+}
+.slider-head{
+  font-size: 55px;
+  line-height: 55px;
+  font-weight:500;
+  color: var(--text-add);
+}
+.slider-link{
+  font-size: 16px;
+  line-height: 18px;
+  font-weight:500;
+  text-decoration: none;
+  vertical-align: middle;
+  background-color: var(--button-red-rest);
+  color: var(--button-link-know);
+}
+.slider-link:hover,
+.slider-link:focus{
+  background-color: var(--button-red-hover);
+  color: var(--button-link-know);
+}
+.slider-link:active{
+  color:var(--button-link-know);
+  background-color: var(--button-red-active);
+}
+/* не понял как сделать полупрозрачность только для текста при нажатии на ссылку. возможно текст нужно обернуть во что-то? */
+.serv-list{
+  list-style-type: none;
+}
+.item-head{
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.serv-link-web{
+  font-size: 16px;
+  line-height: 18px;
+  font-weight:500;
+  text-decoration: none;
+  vertical-align: middle;
+  background-color: var(--button-red-rest);
+  color: var(--button-link-know);
+}
+.serv-link-web:hover,
+.serv-link-web:focus{
+  background-color: var(--button-red-hover);
+  color: var(--button-link-know);
+}
+.serv-link-web:active{
+  background-color:var(--button-red-active);
+}
+.serv-link-app{
+  font-size: 16px;
+  line-height: 18px;
+  font-weight:500;
+  text-decoration: none;
+  vertical-align: middle;
+  background-color: var(--button-green-rest);
+  color: var(--button-link-know);
+}
+.serv-link-app:hover,
+.serv-link-app:focus{
+  background-color: var(--button-green-hover);
+  color: var(--button-link-know);
+}
+.serv-link-app:active{
+  background-color:var(--button-green-active);
+}
+.serv-link-pres{
+  font-size: 16px;
+  line-height: 18px;
+  font-weight:500;
+  text-decoration: none;
+  vertical-align: middle;
+  background-color: var(--button-yellow-rest);
+  color: var(--button-link-know);
+}
+.serv-link-pres:hover,
+.serv-link-pres:focus{
+  background-color: var(--button-yellow-hover);
+  color: var(--button-link-know);
+}
+.serv-link-pres:active{
+  background-color:var(--button-yellow-active);
+}
+.about-heavy{
+  font-size: 45px;
+  line-height:45px;
+  font-weight: 500;
+}
+
+.about-head{
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.table-caption{
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+/* стоит ли прописывать для разных классов повторяющиеся правила(так нагляднее), или лучше записать одно правило для нескольких? */
+.tb-head{
+  font-size: 45px;
+  line-height: 64px;
+  font-weight: 700;
+
+}
+.tb-data{
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+}
+.address-head{
+  font-size: 18px;
+  line-height: 38px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-add);
+}
+.address-text{
+  font-style: inherit;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  color: var(--address);
+}
+.address-tel-link{
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  text-decoration: none;
+  color: var(--address);
+}
+.social-heavy{
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 700;
+}
+.social-light{
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+}
+.address-mail-link{
+  font-size: 16px;
+  line-height: 18px;
+  font-weight:500;
+  vertical-align: middle;
+  text-decoration: none;
+  background-color: var(--button-red-rest);
+  color: var(--button-link-know);
+}
+.address-mail-link:hover,
+.address-mail-link:focus{
+  background-color: var(--button-red-hover);
+  color: var(--button-link-know);
+}
+.address-mail-link:active{
+  background-color:var(--button-red-active);
+}
+.social-list{
+  list-style: none;
+}
+.social-link{
+  text-decoration: none;
+  color: var(--text-add);
+}
+/* не очень понял, нужно ли было писать какие-то предварительные стили для ссылок на соцсети */

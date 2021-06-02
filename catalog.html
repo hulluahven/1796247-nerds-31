@@ -3,11 +3,14 @@
 
 <head>
   <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
   <title>HTML Academy: Нёрдс</title>
   <link rel="icon" href="favicon.ico">
 </head>
 
-<body>
+<body class="page-body">
   <header class="main-header">
     <a class="header-logo">
       <img class="header-logo-img" src="img/nerds-logo.svg" width="159" height="65"
@@ -16,7 +19,7 @@
     <nav class="main-nav">
       <ul class="nav-list">
         <li class="nav-item">
-          <a class="nav-link" href="#">Студия</a>
+          <a class="nav-link" href="index.html">Студия</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Клиенты</a>
@@ -31,11 +34,11 @@
       <a class="nav-cart" href="#">Корзина</a>
     </nav>
   </header>
-  <main>
+  <main class="catalog-page">
     <h1 class="shop-header">Магазин готовых шаблонов</h1>
     <section class="form-filter">
       <h2>Фильтр товаров</h2>
-      <form method="POST" action="https://echo.htmlacademy.ru">
+      <form class="filter-form" method="POST" action="https://echo.htmlacademy.ru">
         <fieldset>
           <legend class="legend">Стоимость:</legend>
           <!-- правильно ли понял, что нужно так делать далее? -->
@@ -224,21 +227,23 @@
     <section class="footer-contacts">
       <h2>Наши контакты</h2>
       <img class="map" src="https://via.placeholder.com/150x100"
-        alt="Наш адрес: Санкт-Петербург, набережная реки Карповки дом 5 литера П">
-      <address class="contacts">
+        alt="Наш адрес: Санкт-Петербург, набережная реки Карповки дом 5, литера П">
+      <p class="address-head">
         Nёrds design studio
+      </p>
+      <address class="address-text">
         наб. Реки Карповки,
         5 лит.П, Санкт-Петербург
       </address>
-      <a href="tel:+78005558628">+7800 555-86-28</a>
-      <a href="mailto:#">Напишите нам</a>
+      <a class="address-tel-link" href="tel:+78005558628">+7 800 555-86-28</a>
+      <a class="address-mail-link" href="mailto:#">Напишите нам</a>
     </section>
     <section class="footer-social">
-      <h2 class="social-bold">Давайте дружить, это выгодно!</h2>
+      <h2 class="social-heavy">Давайте дружить, это выгодно!</h2>
       <p class="social-light">Скидка 10% для друзей из социальных сетей</p>
       <ul class="social-list">
-        <li class="social-item"><a href="#">Вконтакте</a></li>
         <!-- позже добавить ссылкам класс visually-hidden -->
+        <li class="social-item"><a href="#">Вконтакте</a></li>
         <li class="social-item"><a href="#">Фейсбук</a></li>
         <li class="social-item"><a href="#">Инстаграмм</a></li>
       </ul>
