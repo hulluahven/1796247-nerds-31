@@ -19,8 +19,10 @@
    --text-add: #000000;
    --address:#666666;
    --button-link-know:#ffffff;
+   --current:rgba(0, 0, 0, 0.0001);
 }
 /* Global */
+/* Index */
 /* Как лучше сделать стилизацию слайдеров, в плане background-color? Или это позже? */
 .page-body{
   min-width: 960px;
@@ -197,6 +199,183 @@
   line-height: 18px;
   font-weight: 400;
 }
+
+/* Catalog */
+
+.shop-header{
+  font-size: 55px;
+  line-height: 55px;
+  font-weight: 500;
+}
+.filter-fieldset{
+  border:none;
+}
+/* Фильтр по стоимости */
+
+.price-input{
+  background-color: var(--filter-buttons-rest);
+  border: none;
+}
+ /* посмотрел как убрать стрелки, но это немного сложно, поэтому решил, что пока рано для этого задания */
+.legend-price{
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+}
+/* Фильтр по сетке */
+.legend-grid{
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+}
+.grid-list{
+  list-style:none;
+}
+.input-grid-radio+label{
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--text-basic);
+}/* похоже этого достаточно, т.к. текст цвет не меняет при наведении */
+
+/* Фильтр по особенностям */
+.legend-feature{
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+}
+.filter-feature{
+  list-style: none;
+}
+.input-feature-checkbox+label{
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--text-basic);
+}
+/* Кнопка "показать" */
+.filter-btn{
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  text-align: center;
+  color: var(--text-add);
+  vertical-align: middle;
+  text-transform: uppercase;
+  background-color: var(--pagination-rest);
+  border: none;
+}
+.filter-btn:hover,
+.filter-btn:focus{
+  background-color: var(--filter-buttons-hover);
+}
+.filter-btn:active{
+  background-color: var(--filter-buttons-active);
+  opacity: 0.3;
+}
+/* не получается задать полупрозрачность только для текста. при написании правила полупрозрачность задается для всего элемента */
+
+/* Кнопки сортировки по типу и т.д */
+.sort-head{
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+}
+.sort-list{
+  list-style: none;
+}
+/* кнопки сортиовки с треугольниками */
+.button-link{
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  color: var(--text-add);
+  text-transform: uppercase;
+  opacity: 0.3;
+}
+.button-link:hover,
+.button-link:focus{
+  opacity: 0.6;
+}
+.button-link:active{
+  opacity: 1;
+}
+/* Стилизация карточек товаров */
+.product-list{
+  list-style: none;
+}
+.product-container{
+  background-color: var(--pagination-rest);
+  }
+.product-link{
+  text-decoration: none;
+}
+.product-head{
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-add);
+}
+.product-head:hover{
+  color: var(--button-red-rest);
+}
+.product-head:active{
+  color:var(--text-add);
+  opacity: 0.3;
+}
+.product-text{
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  color:var(--address);
+}
+.link-button{
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  color: var(--button-link-know);
+  text-decoration: none;
+  background-color: var(--button-red-rest);
+  text-align: center;
+  vertical-align: middle;
+}
+.link-button:hover,
+.link-button:focus{
+  background-color: var(--button-red-hover);
+}
+.link-button:active{
+  background-color: var(--button-red-active);
+}
+/* Пагинация */
+.pagination-list{
+  list-style: none;
+}
+.pagination-page{
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  color: var(--text-add);
+  background-color: var(--pagination-rest);
+}
+.pagination-page:hover,
+.pagination-page:focus{
+  background-color: var(--pagination-hover);
+}
+.pagination-page:active{
+  background-color: var(--pagination-active);
+}
+/* здесь тоже доделать полупрозрачность текста */
+.pagination-page-current{
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  color: var(--text-add);
+  background-color:var(--current);
+  border: 3px solid var(--text-add);
+}
+/* Адресный пункт */
 .address-head{
   font-size: 18px;
   line-height: 38px;
@@ -252,4 +431,5 @@
   text-decoration: none;
   color: var(--text-add);
 }
+
 /* не очень понял, нужно ли было писать какие-то предварительные стили для ссылок на соцсети */

@@ -39,63 +39,63 @@
     <section class="form-filter">
       <h2>Фильтр товаров</h2>
       <form class="filter-form" method="POST" action="https://echo.htmlacademy.ru">
-        <fieldset>
-          <legend class="legend">Стоимость:</legend>
+        <fieldset class="filter-fieldset">
+          <legend class="legend-price">Стоимость:</legend>
           <!-- правильно ли понял, что нужно так делать далее? -->
           <label for="price-range">
             <input type="range" min="0" max="15000" id="price-range">
           </label>
           <label for="min-price">
-            от<input type="number" name="price" value="0" min="0" id="min-price">
+            от<input class="price-input" type="number" name="price" value="0" min="0" id="min-price">
           </label>
           <label for="max-price">
-            до<input type="number" name="price" value="15000" max="15000" id="max-price">
+            до<input class="price-input" type="number" name="price" value="15000" max="15000" id="max-price">
           </label>
         </fieldset>
-        <fieldset>
-          <legend class="filter-grid">Сетка:</legend>
+        <fieldset class="filter-fieldset">
+          <legend class="legend-grid">Сетка:</legend>
           <!--Вроде-бы всё правильно написал, но TAB-ом ходить не получается по этому фильтру. Почему-не понял -->
           <ul class="grid-list">
             <li class="grid-item">
-              <input type="radio" name="grid" value="adaptive" id="filter-adaptive" checked>
+              <input class="input-grid-radio" type="radio" name="grid" value="adaptive" id="filter-adaptive" checked>
               <label for="filter-adaptive">Адаптивная</label>
             </li>
             <li class="grid-item">
-              <input type="radio" name="grid" value="static" id="filter-static">
+              <input class="input-grid-radio" type="radio" name="grid" value="static" id="filter-static">
               <label for="filter-static">Фиксированная</label>
-            </li>
+            </li> 
             <li class="grid-item">
-              <input type="radio" name="grid" value="stretch" id="filter-stretch">
+              <input class="input-grid-radio" type="radio" name="grid" value="stretch" id="filter-stretch">
               <label for="filter-stretch">Резиновая</label>
             </li>
           </ul>
         </fieldset>
-        <fieldset>
-          <legend class="legend">Особенности:</legend>
+        <fieldset class="filter-fieldset">
+          <legend class="legend-feature">Особенности:</legend>
           <ul class="filter-feature">
             <li class="feature-item">
-              <input type="checkbox" name="slider" id="filter-slider" checked>
+              <input class="input-feature-checkbox" type="checkbox" name="slider" id="filter-slider" checked>
               <label for="filter-slider">Слайдер</label>
             </li>
             <li class="feature-item">
-              <input type="checkbox" name="features" id="filter-features">
+              <input class="input-feature-checkbox" type="checkbox" name="features" id="filter-features">
               <label for="filter-features">Блок преимуществ</label>
             </li>
             <li class="feature-item">
-              <input type="checkbox" name="news" id="filter-news" checked>
+              <input class="input-feature-checkbox" type="checkbox" name="news" id="filter-news" checked>
               <label for="filter-news">Новости</label>
             </li>
             <li class="feature-item">
-              <input type="checkbox" name="galery" id="filter-galery">
+              <input class="input-feature-checkbox" type="checkbox" name="galery" id="filter-galery">
               <label for="filter-galery">Галерея</label>
             </li>
             <li class="feature-item">
-              <input type="checkbox" name="cart" id="filter-cart">
+              <input class="input-feature-checkbox" type="checkbox" name="cart" id="filter-cart">
               <label for="filter-cart">Корзина</label>
             </li>
           </ul>
         </fieldset>
-        <button type="submit">Показать</button>
+        <button class="filter-btn" type="submit">Показать</button>
       </form>
     </section>
     <section class="our-products">
@@ -120,7 +120,7 @@
             <img class="sedona-img" src="img/catalog/sedona.jpg" width="359" height="578"
               alt="Информационный сайт для туристов.">
           </figure>
-          <div class="container">
+          <div class="product-container">
             <a class="product-link" href="#">
               <h3 class="product-head">Sedona</h3>
               <p class="product-text">Информационный сайт для туристов</p>
@@ -136,7 +136,7 @@
             <img class="pink-img" src="img/catalog/pink.jpg" width="359" height="578"
               alt="Продуктовый лендинг приложений для iOS и Android.">
           </figure>
-          <div class="container">
+          <div class="product-container">
             <a class="product-link" href="#">
               <h3 class="product-head">Pink app</h3>
               <p class="product-text">Продуктовый лендинг приложений для iOS и Android</p>
@@ -151,7 +151,7 @@
             <img class="barbershop" src="img/catalog/barbershop.jpg" width="359" height="578"
               alt="Сайт салона красоты для мужчин.">
           </figure>
-          <div class="container">
+          <div class="product-container">
             <a class="product-link" href="#">
               <h3 class="product-head">Barbershop</h3>
               <p class="product-text">Сайт салона красоты. Для мужчин, да.</p>
@@ -166,7 +166,7 @@
             <img class="mishka" src="img/catalog/mishka.jpg" width="359" height="578"
               alt="Интернет-магазин вязаных игрушек">
           </figure>
-          <div class="container">
+          <div class="product-container">
             <a class="product-link" href="#">
               <h3 class="product-head">Mishka</h3>
               <p class="product-text">Интернет-магазин вязаных игрушек</p>
@@ -181,7 +181,7 @@
             <img class="a-plus" src="img/catalog/aplus.jpg" width="359" height="578"
               alt="Лендинг курсов повышения квалификации">
           </figure>
-          <div class="container">
+          <div class="product-container">
             <a class="product-link" href="#">
               <h3 class="product-head">A Plus</h3>
               <p class="product-text">Лендинг курсов повышения квалификации</p>
@@ -196,7 +196,7 @@
             <img class="kvast" src="img/catalog/kvast.jpg" width="359" height="578"
               alt="Промо-сайт производителя крафтового кваса">
           </figure>
-          <div class="container">
+          <div class="product-container">
             <a class="product-link" href="#">
               <h3 class="product-head">Кваст</h3>
               <p class="product-text">Промо-сайт производителя крафтового кваса</p>
@@ -209,16 +209,16 @@
       </ul>
       <ul class="pagination-list">
         <li class="pagination-item">
-          <a>1</a>
+          <a class="pagination-page-current">1</a>
         </li>
         <li class="pagination-item">
-          <a href="#">2</a>
+          <a class="pagination-page" href="#">2</a>
         </li>
         <li class="pagination-item">
-          <a href="#">3</a>
+          <a class="pagination-page" href="#">3</a>
         </li>
         <li class="pagination-item">
-          <a href="#">Следующая</a>
+          <a class="pagination-page" href="#">Следующая</a>
         </li>
       </ul>
     </section>
@@ -243,9 +243,15 @@
       <p class="social-light">Скидка 10% для друзей из социальных сетей</p>
       <ul class="social-list">
         <!-- позже добавить ссылкам класс visually-hidden -->
-        <li class="social-item"><a href="#">Вконтакте</a></li>
-        <li class="social-item"><a href="#">Фейсбук</a></li>
-        <li class="social-item"><a href="#">Инстаграмм</a></li>
+        <li class="social-item">
+          <a class="social-link" href="#">Вконтакте</a>
+        </li>
+        <li class="social-item">
+          <a class="social-link" href="#">Фейсбук</a>
+        </li>
+        <li class="social-item">
+          <a class="social-link" href="#">Инстаграмм</a>
+        </li>
       </ul>
     </section>
   </footer>
