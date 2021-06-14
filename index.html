@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 
 <head>
   <meta charset="utf-8">
@@ -12,29 +12,40 @@
 
 <body class="page-body">
   <header class="main-header">
-    <a class="header-logo">
-      <img class="header-logo-img" src="img/nerds-logo.svg" width="159" height="65"
-        alt="Логотип интренет-магазина Нёрдс">
-    </a>
     <nav class="main-nav">
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Студия</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Клиенты</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="catalog.html">Магазин</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Контакты</a>
-        </li>
-      </ul>
-      <a class="nav-cart" href="#">Корзина</a>
+      <!-- Не понял точно как лучше сделать для грида:  -->
+      <!-- внести лого в нав и задать грид для nav или вынести корзину за nav и тогда задать грид для хедер -->
+      <a class="header-logo">
+        <img class="header-logo-img" src="img/nerds-logo.svg" width="159" height="65"
+          alt="Логотип интренет-магазина Нёрдс">
+      </a>
+      <div class="header-bar">
+        <div class="main-nav-wrapper">
+          <!-- доп обертка -->
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Студия</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Клиенты</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="catalog.html">Магазин</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Контакты</a>
+            </li>
+          </ul>
+          <a class="nav-cart" href="#">Корзина</a>
+          <!-- в демке ссылка обёрнута в див, но если обернуть здесь, то свойства грида не наследуются -->
+          <!-- хотя див в которой лежит ссылка-прямой потомок main-nav-wrapper, свойство stretch у нее по умолчанию не работает -->
+        </div>
+      </div>
     </nav>
+
+
   </header>
-  <main class="index-page">
+  <main class="index-page container">
     <h1>Интернет-магазин Nёrds</h1>
     <section class="our-features">
       <h2>Наши преимущества</h2>
@@ -89,63 +100,72 @@
         </li>
       </ul>
     </section>
-    <section class="about-us">
-      <h2>О нас</h2>
-      <p class="about-heavy">
-        Мы-маленькая, но гордая дизаин-студия из Краснодара
-      </p>
-      <p class="about-light">
-        Исповедуем принципы минимализма и чистоты. Ставим математический расчёт превыше креатива. Работаем не
-        покладая рук, как роботы
-      </p>
-      <p class="about-head">Принимаем заказы на разработку:</p>
-      <ul class="about-list">
-        <li class="about-item">Веб-сайтов любой сложности</li>
-        <!--Нужно ли здесь доб. классы? Ведь можно стилизовать сразу весь список одинаково-->
-        <li class="about-item">Мобильных приложений для iOS и Android</li>
-        <li class="about-item">Слайдшоу и видео для корпоративных презентаций</li>
-      </ul>
-      <table class="promo">
-        <caption class="table-caption">С 2004 года любим точность во всём:</caption>
-        <tr class="row-1">
-          <th class="tb-head">146%</th>
-          <th class="tb-head">100%</th>
-          <th class="tb-head">50%</th>
-        </tr>
-        <tr class="row-2">
-          <td class="tb-data">Уровень самоотдачи</td>
-          <td class="tb-data">Соблюдение сроков</td>
-          <td class="tb-data">Минимальная предоплата</td>
-        </tr>
-      </table>
-    </section>
-    <section class="partners">
-      <h2>Наши партнёры </h2>
-      <ul class="partners-list">
-        <li class="partners-item">
-          <a class="partners-link" href="https://htmlacademy.ru/intensive/htmlcss">
-            <img class="academy" src="https://via.placeholder.com/150x100" alt="HTML academy">
-          </a>
-        </li>
-        <li class="partners-item">
-          <a class="partners-link" href="#">
-            <img class="barbershop" src="https://via.placeholder.com/150x100" alt="Барбершоп Бородинский">
-          </a>
-        </li>
-        <li class="partners-item">
-          <a class="partners-link" href="#">
-            <img class="pink" src="https://via.placeholder.com/150x100" alt="Магазин приложений для iOS и Android Pink">
-          </a>
-        </li>
-        <li class="partners-item">
-          <a class="partners-link" href="#">
-            <img class="mishka" src="https://via.placeholder.com/150x100" alt="Магазин вязаных игрушек Mishka">
-          </a>
-        </li>
-      </ul>
-    </section>
+    <!-- добавил два section для группировки колонок гридов и вложил в div-ы -->
+    <div class="about-us-wrapper">
+      <section class="about-us">
+        <h2>О нас</h2>
+        <p class="about-heavy">
+          Мы-маленькая, но гордая дизаин-студия из Краснодара
+        </p>
+        <p class="about-light">
+          Исповедуем принципы минимализма и чистоты. Ставим математический расчёт превыше креатива. Работаем не
+          покладая рук, как роботы
+        </p>
+        <p class="about-head">Принимаем заказы на разработку:</p>
+        <ul class="about-list">
+          <li class="about-item">Веб-сайтов любой сложности</li>
+          <!--Нужно ли здесь доб. классы? Ведь можно стилизовать сразу весь список одинаково-->
+          <li class="about-item">Мобильных приложений для iOS и Android</li>
+          <li class="about-item">Слайдшоу и видео для корпоративных презентаций</li>
+        </ul>
+      </section>
+      <section class="about-table">
+        <table class="promo">
+          <caption class="table-caption">С 2004 года любим точность во всём:</caption>
+          <tr class="row-1">
+            <th class="tb-head">146%</th>
+            <th class="tb-head">100%</th>
+            <th class="tb-head">50%</th>
+          </tr>
+          <tr class="row-2">
+            <td class="tb-data">Уровень самоотдачи</td>
+            <td class="tb-data">Соблюдение сроков</td>
+            <td class="tb-data">Минимальная предоплата</td>
+          </tr>
+        </table>
+      </section>
+    </div>
+    <div class="partners-wrapper">
+      <section class="partners">
+        <h2>Наши партнёры </h2>
+        <ul class="partners-list">
+          <li class="partners-item">
+            <a class="partners-link" href="https://htmlacademy.ru/intensive/htmlcss">
+              <img class="academy" src="https://via.placeholder.com/150x100" alt="HTML academy">
+            </a>
+          </li>
+          <li class="partners-item">
+            <a class="partners-link" href="#">
+              <img class="barbershop" src="https://via.placeholder.com/150x100" alt="Барбершоп Бородинский">
+            </a>
+          </li>
+          <li class="partners-item">
+            <a class="partners-link" href="#">
+              <img class="pink" src="https://via.placeholder.com/150x100"
+                alt="Магазин приложений для iOS и Android Pink">
+            </a>
+          </li>
+          <li class="partners-item">
+            <a class="partners-link" href="#">
+              <img class="mishka" src="https://via.placeholder.com/150x100" alt="Магазин вязаных игрушек Mishka">
+            </a>
+          </li>
+        </ul>
+      </section>
+    </div>
   </main>
   <footer class="main-footer">
+    <!-- не понимаю, как сделать здесь сетку блока с картой(возможно z-index.) -->
     <section class="footer-contacts">
       <h2>Наши контакты</h2>
       <img class="map" src="https://via.placeholder.com/150x100"
@@ -160,22 +180,26 @@
       <a class="address-tel-link" href="tel:+78005558628">+7 800 555-86-28</a>
       <a class="address-mail-link" href="mailto:#">Напишите нам</a>
     </section>
-    <section class="footer-social">
-      <h2 class="social-heavy">Давайте дружить, это выгодно!</h2>
-      <p class="social-light">Скидка 10% для друзей из социальных сетей</p>
-      <ul class="social-list">
-        <!-- позже добавить ссылкам класс visually-hidden -->
-        <li class="social-item">
-          <a class="social-link" href="#">Вконтакте</a>
-        </li>
-        <li class="social-item">
-          <a class="social-link" href="#">Фейсбук</a>
-        </li>
-        <li class="social-item">
-          <a class="social-link" href="#">Инстаграмм</a>
-        </li>
-      </ul>
-    </section>
+    <div class="footer-social-wrapper">
+      <section class="footer-social">
+        <div class="social-promo">
+          <h2 class="social-heavy">Давайте дружить, это выгодно!</h2>
+          <p class="social-light">Скидка 10% для друзей из социальных сетей</p>
+        </div>
+        <ul class="social-list">
+          <!-- позже добавить ссылкам класс visually-hidden -->
+          <li class="social-item">
+            <a class="social-link" href="#">Вконтакте</a>
+          </li>
+          <li class="social-item">
+            <a class="social-link" href="#">Фейсбук</a>
+          </li>
+          <li class="social-item">
+            <a class="social-link" href="#">Инстаграмм</a>
+          </li>
+        </ul>
+      </section>
+    </div>
   </footer>
 </body>
 
