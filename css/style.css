@@ -1,37 +1,37 @@
 /* Variables */
 :root{
-   --button-red-rest:#FB565A;
-   --button-red-hover:#E74246;
-   --button-red-active:#D7373B;
-   --button-green-rest:#00CA74;
-   --button-green-hover:#00BC6C;
-   --button-green-active:#00AA62;
-   --button-yellow-rest:#EFC849;
-   --button-yellow-hover:#EAB534;
-   --button-yellow-active:#E5A722;
-   --filter-buttons-rest:#EEEEEE;
-   --filter-buttons-hover:#DFDFDF;
-   --filter-buttons-active:#D5D5D5;
-   --pagination-rest:#EEEEEE;
-   --pagination-hover:#DFDFDF;
-   --pagination-active:#D5D5D5;
-	 --text-basic:#283136;
-   --text-add: #000000;
-   --address:#666666;
-   --button-link-know:#ffffff;
-   --current:rgba(0, 0, 0, 0.0001);
+   --button-red-rest: #FB565A;
+   --button-red-hover: #E74246;
+   --button-red-active: #D7373B;
+   --button-green-rest: #00CA74;
+   --button-green-hover: #00BC6C;
+   --button-green-active: #00AA62;
+   --button-yellow-rest: #EFC849;
+   --button-yellow-hover: #EAB534;
+   --button-yellow-active: #E5A722;
+   --filter-buttons-rest: #EEEEEE;
+   --filter-buttons-hover: #DFDFDF;
+   --filter-buttons-active: #D5D5D5;
+   --pagination-rest: #EEEEEE;
+   --pagination-hover: #DFDFDF;
+   --pagination-active: #D5D5D5;
+	 --text-basic: #283136;
+    --text-add: #000000;
+   --address: #666666;
+   --button-link-know: #ffffff;
+   --current: rgba(0, 0, 0, 0.0001);
 }
 /* Global */
 /* Index */
-/* Как лучше сделать стилизацию слайдеров, в плане background-color? Или это позже? */
 .page{
-  height:100%;
+  height: 100%;
 }
-.page-body {
+
+.page-body{
   min-width: 960px;
   margin: 0;
   padding: 0;
-  font-family:"Roboto", "Arial", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
@@ -41,57 +41,55 @@
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
-
-}
-/* Нужно ли прописывать название шрифта для каждого элемента или достаточно задать в body? */
- .main-header{
-  margin-bottom: 70px;
-  outline: 5px solid rgba(0, 255, 0, 0.7);
-  outline-offset: -5px;
 }
 
- .header-logo{
-  outline: 5px solid rgba(255, 0, 0, 0.3);
-  outline-offset: -5px;
- }
-.main-nav {
+.main-header{
+  background-color: #eeeeee;
+  min-height: 136px;
+  padding-top: 76px;
+  box-sizing: border-box;
+}
+
+.main-nav{
   font-size: 16px;
   line-height: 30px;
   font-weight: 500;
   color: var(--text-basic);
   background-color: transparent;
   display: grid;
-}
-
-.container{
-  width: 1174px;
+  width: 1160px;
+  /* по центру отн родителя */
   margin: 0 auto;
-  padding: 0 10px;
-
+  position: relative;
 }
+
 .header-bar{
   background-color: transparent;
 }
-/* ощущение что можно сделать шапку проще */
+
 .header-logo{
-  justify-self: start;
+  position: absolute;
+  left: 0;
+  top: -27px;
 }
+
 .main-nav-wrapper{
   display: grid;
   grid-template-columns: 1fr min-content;
   background-color: transparent;
-  width: 1174px;
+  width: 1160px;
   margin: 0 auto;
   padding: 0 10px;
 }
+
 .nav-list{
   margin: 0;
-  padding: 0;
-  outline: 5px solid rgba(0, 255, 255, 0.3);
-  outline-offset: -5px;
+  padding: 0 340px 0 352px;
   list-style: none;
-  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
+
 .nav-link{
   font-size: 16px;
   line-height: 30px;
@@ -100,16 +98,18 @@
   text-decoration: none;
   text-transform: uppercase;
 }
+
 .nav-link:hover,
 .nav-link:focus{
-  color:var(--button-red-rest);
+  color: var(--button-red-rest);
 }
+
 .nav-link:active{
   color: var(--text-basic);
   text-decoration: underline;
   text-decoration-color: var(--button-red-rest);
 }
-/* правильно ли так написать правило для ссылки на страницу, на которой находимся? или это вообще лишнее сейчас? */
+
 .nav-cart{
   font-size: 16px;
   line-height: 30px;
@@ -117,51 +117,220 @@
   color: var(--text-basic);
   text-decoration: none;
   text-transform: uppercase;
-  outline: 5px solid rgba(255, 0, 255, 0.3);
-  outline-offset: -5px;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
+
 .nav-cart:hover,
 .nav-cart:focus{
   color:var(--button-red-rest);
 }
+
 .nav-cart:active{
   color: var(--text-basic);
   text-decoration: underline;
   text-decoration-color: var(--button-red-rest);
 }
-.slider-list{
-  list-style: none;
+
+.nav-cart::before{
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: -40px;
+  width: 16px;
+  height: 18px;
+  background-image: url("../img/cart-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
 }
+
+.visually-hidden{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.our-features{
+  background-color: #eeeeee;
+  margin-bottom: 79px;
+}
+
+.slider-list{
+  padding: 0;
+  margin: 0 auto;
+  list-style: none;
+  width: 1160px;
+  min-height: 410px;
+}
+
+.slider-item{
+  display: none;
+  padding-top: 56px;
+  position: relative;
+}
+
+.slider-item.slider-item--active::after{
+  content: "";
+  position: absolute;
+  width: 760px;
+  height: 436px;
+  right: 4px;
+  top: -22px;
+}
+
+.slider-item--first::after{
+  background: url("../img/sliders/phones.png") no-repeat top left;
+
+}
+
+.slider-item--second::after{
+  background: url("../img/sliders/math.png") no-repeat top left;
+}
+
+.slider-item--third::after{
+  background: url("../img/sliders/night.png") no-repeat top left;
+}
+
+.slider-item--active{
+  display: block;
+}
+
+.slider-text--first{
+  margin: 0 0 39px;
+  padding: 0;
+  width: 401px;
+}
+
+.slider-text--second{
+  margin: 0 0 39px;
+  padding: 0;
+  width: 401px;
+  margin: 0px 0 28px;
+  padding: 12px 0px 0px 0px;
+  width: 426px;
+}
+
+.slider-text--third{
+  margin: 0 0 28px;
+  padding-top: 13px;
+  width: 401px;
+  width: 356px;
+}
+
 .slider-head{
   font-size: 55px;
   line-height: 55px;
   font-weight:500;
   color: var(--text-add);
 }
+
+.slider-head--first{
+  padding: 1px;
+  margin: 0 0 24px;
+  width: 385px;
+}
+
+.slider-head--second{
+  padding: 0;
+  margin: 0 0 26px;
+  width: 527px;
+}
+
+.slider-head--third{
+  padding: 0;
+  margin: 0 0 26px;
+  width: 527px;
+  width: 422px; 
+}
+ 
 .slider-link{
   font-size: 16px;
   line-height: 18px;
-  font-weight:500;
+  font-weight: 500;
   text-decoration: none;
   vertical-align: middle;
   background-color: var(--button-red-rest);
   color: var(--button-link-know);
+  text-transform: uppercase;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 3px;
 }
+
+.slider-link--first{
+  padding: 16px 55px 16px;
+}
+
+.slider-link--second{
+  padding: 16px 54px 16px 55px;
+}
+
+.slider-link--third{
+  padding: 14px 55px 17px 54px;
+}
+
 .slider-link:hover,
 .slider-link:focus{
   background-color: var(--button-red-hover);
   color: var(--button-link-know);
 }
+
 .slider-link:active{
-  color:var(--button-link-know);
+  color: rgba(255, 255, 255, 0.3);
   background-color: var(--button-red-active);
 }
-/* не понял как сделать полупрозрачность только для текста при нажатии на ссылку. возможно текст нужно обернуть во что-то? */
-.our-serv{
-  outline: 5px solid rgba(255, 0, 0 , 0.3);
-  margin-bottom: 121px;
+/* прием под джс */
 
+.slider-nav{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  margin-left: -10px;
+  transform: translateX(-50%);
 }
+
+.slider-nav-item{
+  margin-left: 10px;
+}
+
+.slider-nav-link{
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider-nav-link--active::after{
+  content: "";
+  width: 8px;
+  height: 8px;
+  border: 2px solid #C1C1C1;
+  box-sizing: border-box;
+  display: block;
+  border-radius: 50%;
+}
+
+.our-serv{
+  width: 1160px;
+  margin: 0 auto 80px;
+}
+
 .serv-list{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -170,91 +339,131 @@
   padding: 0;
   list-style-type: none;
 }
+
 .serv-item{
-  text-align: center;
-  outline: 5px solid rgba(0, 255, 255 , 0.3);
-  outline-offset: -5px;
+  text-align: left;
+  padding-top: 171px;
+  position: relative;
 }
+
+.serv-item::after{
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 146px;
+  display: block;
+  top: 0;
+  left: 0;
+  background: rgb(211, 45, 45);
+}
+
+.serv-item--first::after{
+  background: url("../img/illustrations/web.png");
+}
+
+.serv-item--second::after{
+  background: url("../img/illustrations/app.png");
+}
+
+.serv-item--third::after{
+  background: url("../img/illustrations/pres.png");
+}
+
 .item-head{
   font-size: 24px;
   line-height: 30px;
   font-weight: 700;
   text-transform: uppercase;
-  
+  margin: 0 0 16px;
+  padding: 0; 
 }
+
 .item-text{
-  margin: 0 10px;
+  margin: 0 0 32px;
+  padding: 0;
+  width: 251px;
 }
-/* Нужно ли сразу задать выравнивание теста или потом уже сделать */
-.serv-link-web{
+
+.serv-link{
   font-size: 16px;
   line-height: 18px;
-  font-weight:500;
+  font-weight: 500;
   text-decoration: none;
   vertical-align: middle;
-  background-color: var(--button-red-rest);
   color: var(--button-link-know);
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 17px 40px;
+  border-radius: 3px;
 }
-.serv-link-web:hover,
-.serv-link-web:focus{
+
+.serv-link--web{
+  background-color: var(--button-red-rest);
+}
+
+.serv-link--web:hover,
+.serv-link--web:focus{
   background-color: var(--button-red-hover);
   color: var(--button-link-know);
 }
-.serv-link-web:active{
-  background-color:var(--button-red-active);
+
+.serv-link--web:active{
+  background-color: var(--button-red-active);
+  color: rgba(255, 255, 255, 0.3);
 }
-.serv-link-app{
-  font-size: 16px;
-  line-height: 18px;
-  font-weight:500;
-  text-decoration: none;
-  vertical-align: middle;
+
+.serv-link--app{
   background-color: var(--button-green-rest);
-  color: var(--button-link-know);
 }
-.serv-link-app:hover,
-.serv-link-app:focus{
+
+.serv-link--app:hover,
+.serv-link--app:focus{
   background-color: var(--button-green-hover);
   color: var(--button-link-know);
 }
-.serv-link-app:active{
-  background-color:var(--button-green-active);
+
+.serv-link--app:active{
+  background-color: var(--button-green-active);
+  color: rgba(255, 255, 255, 0.3);
 }
-.serv-link-pres{
-  font-size: 16px;
-  line-height: 18px;
-  font-weight:500;
-  text-decoration: none;
-  vertical-align: middle;
+
+.serv-link--pres{
   background-color: var(--button-yellow-rest);
-  color: var(--button-link-know);
 }
-.serv-link-pres:hover,
-.serv-link-pres:focus{
+
+.serv-link--pres:hover,
+.serv-link--pres:focus{
   background-color: var(--button-yellow-hover);
   color: var(--button-link-know);
 }
-.serv-link-pres:active{
-  background-color:var(--button-yellow-active);
+
+.serv-link--pres:active{
+  background-color: var(--button-yellow-active);
+  color: rgba(255, 255, 255, 0.3);
 }
+
 .about-us-wrapper{
   display: grid;
   grid-template-columns: 1fr min-content;
-  outline: 5px solid rgba(255, 0, 0, 0.7);
+  column-gap: 50px;
+  width: 1160px;
+  margin: 0 auto;
 }
-/* не уверен насчёт правильности распределения выше */
+
 .about-us{
-  outline: 5px solid rgba(0, 255, 255, 0.7);
-  outline-offset: -5px;
+  margin: 0;
+  padding: 0;
 }
-.about-table{
-  outline: 5px solid rgba(0, 255, 0, 0.7);
-  outline-offset: -5px;
-}
+
 .about-heavy{
   font-size: 45px;
-  line-height:45px;
+  line-height: 45px;
   font-weight: 500;
+  margin: 74px 0 33px;
+}
+
+.about-light{
+  width: 616px;
 }
 
 .about-head{
@@ -262,14 +471,45 @@
   line-height: 24px;
   font-weight: 700;
   text-transform: uppercase;
+  margin: 40px auto;
 }
+
+.about-list{
+  list-style: none;
+}
+
+.about-item::before{
+  content: "—";
+  position: relative;
+  left: -5px;
+}
+
+.about-table::before{
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: -17px;
+  width: 386px;
+  height: 225px;
+  background-image: url("../img/illustrations/promo.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+.about-table{
+  text-align: center;
+  padding-top: 282px;
+  position: relative;
+
+}
+
 .table-caption{
+  display: table-caption;
   font-size: 16px;
   line-height: 24px;
   font-weight: 700;
   text-transform: uppercase;
 }
-/* стоит ли прописывать для разных классов повторяющиеся правила(так нагляднее), или лучше записать одно правило для нескольких? */
+
 .tb-head{
   font-size: 45px;
   line-height: 64px;
@@ -281,48 +521,213 @@
   line-height: 18px;
   font-weight: 400;
 }
-.partners-wrapper{
 
+/* .partners-wrapper{
   outline: 5px solid rgba(0, 255, 0, 0.7);
+  width: 1160px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 260px 260px 260px 260px; 
+} */
 
-}
+/* .partners{
+  outline: 5px solid rgba(0, 255, 0, 0.7);
+  width: 1160px;
+  min-height: 184px;
+  margin: 80px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+} */
+
 .partners{
-  outline: 5px solid rgba(0, 255, 255 , 0.3);
-  outline-offset: -5px;
-  margin-top: 73px;
-  margin-bottom: 80px;
+  width: 1160px;
+  margin: 73px auto 80px;
 }
+
 .partners-list{
   display: grid;
   grid-template-columns: 260px 260px 260px 260px;
   column-gap: 40px;
-  margin: 0;
-  padding: 0;
+  margin: 0 auto;
   list-style: none;
+  /* display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; */
+  list-style: none;
+  margin: 0 -66px;
+  padding: 70px 53px;
+  width: 1160px;
+  
+}
 
+.partners-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  width: 290px;
+  height: 75px;
 }
+
 .partners-item{
-  outline: 5px solid rgba(255, 0, 0 , 0.3);
-  outline-offset: -5px;
+  align-items: center;
 }
-/* почему список вылез за края заданной ширины main */
+
+.partners-link:hover{
+  opacity: 0.2;
+}
+
+.partners-link:active{
+  opacity: 0.1;
+}
+
+/* ************************************************************ */
+/* Catalog inner-page */
+
+
 /* Catalog */
+.catalog-page{
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.catalog-container{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
 
 .shop-header{
   font-size: 55px;
   line-height: 55px;
   font-weight: 500;
+  margin: 0 auto;
+  background-color: #eeeeee;
+  grid-column: 1 / -1;
 }
-.filter-fieldset{
-  border:none;
-}
-/* Фильтр по стоимости */
 
+.form-filter{
+  width: 260px;
+  margin: 0;
+  padding: 0;
+}
+
+.filter-fieldset{
+  border: none;
+}
+/* ползунки ***********************************************************/
+
+.filter-item {
+  margin: 0;
+  padding: 0;
+  border: none;
+  /* Для демонстрации */
+  width: 260px;
+  margin: 50px auto; 
+}
+.bar{
+  width: 30%;
+  margin-left: 20%
+}
+
+.toggle.toggle-min{
+  left: 20%;
+}
+
+.toggle.toggle-max{
+  left: 5;
+}
+
+.range-filter {
+  width: 260px;
+  margin-top: 49px;
+}
+
+.filter-item legend {
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.range-controls {
+  position: relative;
+  height: 41px;
+  margin-bottom: 15px;
+  padding-top: 39px;
+  padding-right: 20px;
+  padding-left: 20px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+}
+
+.range-controls .scale {
+  height: 2px;
+  background: #d7dcde;
+}
+
+.range-controls .bar {
+  width: 70%;
+  height: 2px;
+  background: #00ca74;
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: 31px;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  padding: 0;
+  border: 8px solid #ffffff;
+  background-color: #ababab;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+  cursor: pointer;
+}
+
+.range-controls .toggle-min {
+  left: 16px;
+}
+
+.range-controls .toggle-max {
+  left: 160px;
+}
+
+.price-controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.price-controls label {
+  text-transform: uppercase;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 16px;
+}
+
+.price-controls input {
+  width: 60px;
+  padding: 10px;
+  margin-left: 10px;
+  text-align: center;
+  color: #283136;
+  border: none;
+  border-radius: 5px;
+  background: #f1f1f1;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* ползунки ***********************************************************/
+
+
+/* Фильтр по стоимости */
 .price-input{
   background-color: var(--filter-buttons-rest);
   border: none;
 }
- /* посмотрел как убрать стрелки, но это немного сложно, поэтому решил, что пока рано для этого задания */
+
 .legend-price{
   font-size: 18px;
   line-height: 30px;
@@ -334,14 +739,60 @@
   line-height: 30px;
   font-weight: 700;
 }
-.grid-list{
-  list-style:none;
+
+.grid-item{
+  margin-bottom: 20px;
 }
+
+.grid-item label{
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+}
+
+.grid-list{
+  list-style: none;
+}
+
 .input-grid-radio+label{
   font-size: 16px;
   line-height: 20px;
   color: var(--text-basic);
 }/* похоже этого достаточно, т.к. текст цвет не меняет при наведении */
+
+.input-grid-radio + label::before{
+  content: "";
+  position: absolute;
+  left: -42px;
+  top: 0;
+  width: 25px;
+  height: 25px;
+  border: 4px solid #4D4D4D;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.input-grid-radio + label::after{
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: -34px;
+  width: 9px;
+  height: 9px;
+  background: #4D4D4D;
+  border-radius: 50%;
+  box-sizing: border-box;
+  display: none;
+}
+
+.input-grid-radio:checked + label::after{
+  display: block;
+}
+
+.input-grid-radio:focus + label{
+  color:red;
+}
 
 /* Фильтр по особенностям */
 .legend-feature{
@@ -349,9 +800,11 @@
   line-height: 30px;
   font-weight: 700;
 }
+
 .filter-feature{
   list-style: none;
 }
+
 .input-feature-checkbox+label{
   font-size: 16px;
   line-height: 20px;
@@ -362,29 +815,40 @@
   font-size: 16px;
   line-height: 18px;
   font-weight: 500;
-  text-align: center;
+  vertical-align: middle;
   color: var(--text-add);
   vertical-align: middle;
   text-transform: uppercase;
-  background-color: var(--pagination-rest);
+  background: #eeeeee;
   border: none;
+  padding: 17px 89px;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 3px;
+  
 }
+
 .filter-btn:hover,
 .filter-btn:focus{
-  background-color: var(--filter-buttons-hover);
+  background: #DFDFDF;;
 }
+
 .filter-btn:active{
-  background-color: var(--filter-buttons-active);
-  opacity: 0.3;
+background: #D5D5D5;
+box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+border-radius: 3px;
 }
 /* не получается задать полупрозрачность только для текста. при написании правила полупрозрачность задается для всего элемента */
-
 /* Кнопки сортировки по типу и т.д */
+
+
 .sort-head{
   font-size: 18px;
   line-height: 30px;
   font-weight: 700;
+  grid-column: 1 / -1;
 }
+
 .sort-list{
   list-style: none;
 }
@@ -398,43 +862,111 @@
   text-transform: uppercase;
   opacity: 0.3;
 }
+
 .button-link:hover,
 .button-link:focus{
   opacity: 0.6;
 }
+
 .button-link:active{
   opacity: 1;
 }
+
+.our-products{
+  width: 760px;
+}
+
+.sort-container{
+  display: flex;
+}
+
+
 /* Стилизация карточек товаров */
 .product-list{
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  justify-content: space-between;
+  
 }
+
+.product-item{
+  position: relative;
+  border-radius: 5px;
+  background: rgba(77, 77, 77, 0.12);
+  padding-top: 41px;
+  margin-bottom: 27px;
+}
+
+.product-img {
+  padding: 0;
+  margin: 0;
+}
+
 .product-container{
   background-color: var(--pagination-rest);
-  }
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  padding-top: 29px;
+  padding-bottom: 102px;
+  opacity: 0;
+
+}
+
+.product-item:hover,
+.product-item:focus-within{
+  background: #4D4D4D;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+.product-item:hover .product-container,
+.product-item:focus-within .product-container{
+  opacity: 1;
+}
+
+
+
 .product-link{
   text-decoration: none;
 }
+
 .product-head{
+  display: block;
   font-size: 18px;
   line-height: 30px;
   font-weight: 700;
   text-transform: uppercase;
   color: var(--text-add);
+  padding: 0;
+  margin: 0 0 12px;
+  text-decoration: none;
 }
+
 .product-head:hover{
   color: var(--button-red-rest);
 }
+
 .product-head:active{
-  color:var(--text-add);
+  color: var(--text-add);
   opacity: 0.3;
 }
+
 .product-text{
   font-size: 16px;
   line-height: 18px;
   font-weight: 400;
-  color:var(--address);
+  color: var(--address);
+  margin: 0 auto 10px;
+  padding: 0;
+  min-height: 59px;
+  width: 208px;
 }
+
 .link-button{
   font-size: 16px;
   line-height: 18px;
@@ -444,17 +976,39 @@
   background-color: var(--button-red-rest);
   text-align: center;
   vertical-align: middle;
+  border-radius: 3px;
+  padding: 17px 20px;
+  bottom: 51px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-block;
+  min-width: 159px;
+  position: absolute;
+  
+
+
 }
+
 .link-button:hover,
 .link-button:focus{
   background-color: var(--button-red-hover);
 }
+
 .link-button:active{
-  background-color: var(--button-red-active);
+background-color: var(--button-red-active);
+box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
 }
 /* Пагинация */
 .pagination-list{
   list-style: none;
+}
+
+.pagination-item{
+  width: 50px;
+  height: 50px;
+  background: #EEEEEE;
+  border-radius: 3px;
+  display: inline-block;
 }
 .pagination-page{
   text-decoration: none;
@@ -464,10 +1018,17 @@
   color: var(--text-add);
   background-color: var(--pagination-rest);
 }
+
+.page-next{
+  width: 103px;
+  text-align: center;
+}
+
 .pagination-page:hover,
 .pagination-page:focus{
   background-color: var(--pagination-hover);
 }
+
 .pagination-page:active{
   background-color: var(--pagination-active);
 }
@@ -478,27 +1039,74 @@
   line-height: 18px;
   font-weight: 500;
   color: var(--text-add);
-  background-color:var(--current);
+  background-color: var(--current);
   border: 3px solid var(--text-add);
 }
-.main-footer{
-  outline: 5px solid rgba(255, 0, 0, 0.7);
-  outline-offset: -5px;
+/* FOOTER ******************************************************/
+
+.footer-contacts{
+  position: relative;
+  padding-top: 56px;;
+  padding-bottom: 55px;
+  margin-bottom: 69px;
 }
+
+.map-wrapper{
+  background-size: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.map-img{
+  display: block;
+  height: 100%;
+}
+
+.map-google-container{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.map-google{
+  width: 100%;
+  height: 100%;
+}
+
+.address-wrapper{
+  display: inline-block;
+  margin: 0 auto;
+  padding: 0;
+  width: 318px;
+  min-height: 308px;
+  position: relative;
+  z-index: 20;
+  left: 50%;
+  margin-left: -580px;
+  background: white;
+  padding-left: 50px;
+  padding-right: 50px;
+  box-sizing: border-box;
+  padding-top: 45px;
+}
+
 .footer-social{
   display: grid;
   grid-template-columns: min-content 1fr;
-  width: 1060px;
+  width: 1160px;
   margin: 0 auto;
   padding: 0 10px;
-  outline: 5px solid purple;
-  outline-offset: -5px;
   }
-/* стоит ли так задавать промо с социалками, если в макете они фиксир ширины? */
-.social-promo{
-  outline: 5px solid rgba(0, 255, 0, 0.7);
-  order:1;
 
+.social-promo{
+  order:1;
 }
 /* Адресный пункт */
 .address-head{
@@ -507,58 +1115,130 @@
   font-weight: 700;
   text-transform: uppercase;
   color: var(--text-add);
+  padding: 0;
+  margin: 0;
+  margin-bottom: 19px;
 }
+
 .address-text{
   font-style: inherit;
   font-size: 16px;
   line-height: 18px;
   font-weight: 400;
   color: var(--address);
+  padding: 0;
+  margin: 0 0 18px;
 }
+
 .address-tel-link{
   font-size: 16px;
   line-height: 18px;
   font-weight: 400;
   text-decoration: none;
   color: var(--address);
+  display: block;
+  margin-bottom: 36px;
 }
+
 .social-heavy{
   font-size: 36px;
   line-height: 36px;
   font-weight: 700;
 }
+
 .social-light{
   font-size: 16px;
   line-height: 22px;
   font-weight: 400;
 }
+
 .address-mail-link{
   font-size: 16px;
   line-height: 18px;
-  font-weight:500;
+  font-weight: 500;
   vertical-align: middle;
   text-decoration: none;
   background-color: var(--button-red-rest);
   color: var(--button-link-know);
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 18px 20px 16px;
+  border-radius: 3px;
+  min-width: 100%;
+  box-sizing: border-box;
+  text-align: center;
 }
+
 .address-mail-link:hover,
 .address-mail-link:focus{
   background-color: var(--button-red-hover);
   color: var(--button-link-know);
 }
+
 .address-mail-link:active{
   background-color:var(--button-red-active);
+  color: rgba(255, 255, 255, 0.3);
 }
+
 .social-list{
-  outline: 5px solid rgba(0, 255, 255, 0.7);
-  outline-offset: -5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   list-style: none;
   margin: 0;
   padding: 0;
-}
-.social-link{
-  text-decoration: none;
-  color: var(--text-add);
+  width: 270px;
 }
 
-/* не очень понял, нужно ли было писать какие-то предварительные стили для ссылок на соцсети */
+.social-link{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--text-add);
+  background-color: #e1e1e1;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+}
+
+.social-link::after{
+  content: "";
+  width: 26px;
+  height: 15px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.social-item{
+  align-items: center;
+}
+
+.link-vk::after{
+  background-image: url("../img/social/vk.svg");
+}
+
+.social-link:hover{
+  background: linear-gradient(0deg, #E74246, #E74246), #FFFFFF;
+}
+
+.social-link:active{
+  background: linear-gradient(0deg, #D7373B, #D7373B), #FFFFFF;
+  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+}
+
+.social-link:active::after{
+  opacity: 0.3;
+}
+
+.link-fb::after{
+  background-image: url("../img/social/facebook.svg");
+  width: 12px;
+  height: 22px;
+}
+
+.link-inst::after{
+  background-image: url("../img/social/insta.svg");
+  width: 21px;
+  height: 21px;
+}

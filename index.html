@@ -13,15 +13,12 @@
 <body class="page-body">
   <header class="main-header">
     <nav class="main-nav">
-      <!-- Не понял точно как лучше сделать для грида:  -->
-      <!-- внести лого в нав и задать грид для nav или вынести корзину за nav и тогда задать грид для хедер -->
       <a class="header-logo">
-        <img class="header-logo-img" src="img/nerds-logo.svg" width="159" height="65"
+        <img class="header-logo-img" src="img/nerds-logo.svg" width="160" height="65"
           alt="Логотип интренет-магазина Нёрдс">
       </a>
       <div class="header-bar">
         <div class="main-nav-wrapper">
-          <!-- доп обертка -->
           <ul class="nav-list">
             <li class="nav-item">
               <a class="nav-link" href="#">Студия</a>
@@ -37,148 +34,154 @@
             </li>
           </ul>
           <a class="nav-cart" href="#">Корзина</a>
-          <!-- в демке ссылка обёрнута в див, но если обернуть здесь, то свойства грида не наследуются -->
-          <!-- хотя див в которой лежит ссылка-прямой потомок main-nav-wrapper, свойство stretch у нее по умолчанию не работает -->
         </div>
       </div>
+      <a class="nav-cart" href="#">Корзина</a>
     </nav>
-
-
   </header>
-  <main class="index-page container">
-    <h1>Интернет-магазин Nёrds</h1>
+  <main class="index-page">
+    <h1 class="visually-hidden">Интернет-магазин Nёrds</h1>
     <section class="our-features">
-      <h2>Наши преимущества</h2>
+      <h2 class="visually-hidden">Наши преимущества</h2>
       <ul class="slider-list">
-        <li class="slider-item">
-          <p class="slider-head">Долго, дорого, скурпулезно</p>
-          <!-- если текст в некоторых секциях одного формата, нужно ли всё-равно задать разные классы для каждой подписи? -->
-          <p class="slider-text">Математически выверенный дизаин для вашего сайта или мобильного приложения</p>
-          <a class="slider-link" href="#">Узнать больше</a>
+        <li class="slider-item slider-item--first">
+          <p class="slider-head slider-head--first">Долго, дорого, скрупулезно.</p>
+          <p class="slider-text slider-text--first">
+            Математически выверенный дизайн<br>для вашего сайта или мобильного приложения.
+          </p>
+          <a class="slider-link slider-link--first" href="#">Узнать больше</a>
         </li>
-        <li class="slider-item">
-          <p class="slider-head">Любим математику как никто другой</p>
-          <p class="slider-text">Никакого креатива, только математические формулы для расчёта идеальных пропорций</p>
-          <a class="slider-link" href="#">Узнать больше</a>
+        <li class="slider-item slider-item--second">
+          <p class="slider-head slider-head--second">Любим математику как никто другой</p>
+          <p class="slider-text slider-text--second">
+            Никакого креатива, только математические формулы для расчёта идеальных пропорций
+          </p>
+          <a class="slider-link slider-link--second" href="#">Узнать больше</a>
         </li>
-        <li class="slider-item">
-          <p class="slider-head">Только ночь, только хардкор</p>
-          <p class="slider-text">Работать днём как все? Мы против этого. Ближе к полуночи работа только начинается</p>
-          <a class="slider-link" href="#">Узнать больше</a>
+        <li class="slider-item slider-item--active slider-item--third">
+          <p class="slider-head slider-head--third">Только ночь, только хардкор</p>
+          <p class="slider-text slider-text--third">Работать днем, как все? Мы против этого. Ближе к полуночи работа
+            только начинается.</p>
+          <a class="slider-link slider-link--third" href="#">Узнать больше</a>
         </li>
       </ul>
       <ul class="slider-nav">
-        <!--Навигация по слайдеру-список ссылок-->
         <li class="slider-nav-item">
-          <a class="slider-nav-link" href="#"></a>
+          <a class="slider-nav-link slider-nav-link--active" aria-label="Первый экран слайдера" href="#"></a>
         </li>
         <li class="slider-nav-item">
-          <a class="slider-nav-link" href="#"></a>
+          <a class="slider-nav-link" aria-label="Второй экран слайдера" href="#"></a>
         </li>
         <li class="slider-nav-item">
-          <a class="slider-nav-link" href="#"></a>
+          <a class="slider-nav-link" aria-label="Третий экран слайдера" href="#"></a>
         </li>
       </ul>
     </section>
     <section class="our-serv">
-      <h2>Наши Услуги</h2>
+      <h2 class="visually-hidden">Наши Услуги</h2>
       <ul class="serv-list">
-        <li class="serv-item">
+        <li class="serv-item serv-item--first">
           <h3 class="item-head">Веб-сайты</h3>
-          <p class="item-text">Мир никогда не будет прежним после того как увидит ваш сайт</p>
-          <a class="serv-link-web" href="#">Заказать</a>
+          <p class="item-text">Мир никогда не будет прежним после того как увидит ваш сайт!</p>
+          <a class="serv-link serv-link--web" href="#">Заказать</a>
         </li>
-        <li class="serv-item">
+        <li class="serv-item serv-item--second">
           <h3 class="item-head">Приложения</h3>
-          <p class="item-text">Покорите топ-10 приложений в AppStore или Google Play</p>
-          <a class="serv-link-app" href="#">Заказать</a>
+          <p class="item-text">Покорите топ-10 приложений в&nbsp;AppStore и Google Play</p>
+          <a class="serv-link serv-link--app" href="#">Заказать</a>
         </li>
-        <li class="serv-item">
+        <li class="serv-item serv-item--third">
           <h3 class="item-head">Презентации</h3>
           <p class="item-text">Вы даже не подозреваете, насколько вы изумительны!</p>
-          <a class="serv-link-pres" href="#">Заказать</a>
+          <a class="serv-link serv-link--pres" href="#">Заказать</a>
         </li>
       </ul>
     </section>
-    <!-- добавил два section для группировки колонок гридов и вложил в div-ы -->
     <div class="about-us-wrapper">
       <section class="about-us">
-        <h2>О нас</h2>
+        <h2 class="visually-hidden">О нас</h2>
         <p class="about-heavy">
-          Мы-маленькая, но гордая дизаин-студия из Краснодара
+          Мы — маленькая, но гордая дизайн-студия из Краснодара.
         </p>
         <p class="about-light">
           Исповедуем принципы минимализма и чистоты. Ставим математический расчёт превыше креатива. Работаем не
           покладая рук, как роботы
         </p>
-        <p class="about-head">Принимаем заказы на разработку:</p>
+        <p class="about-head">Выполняем заказы на разработку:</p>
         <ul class="about-list">
           <li class="about-item">Веб-сайтов любой сложности</li>
-          <!--Нужно ли здесь доб. классы? Ведь можно стилизовать сразу весь список одинаково-->
           <li class="about-item">Мобильных приложений для iOS и Android</li>
           <li class="about-item">Слайдшоу и видео для корпоративных презентаций</li>
         </ul>
       </section>
       <section class="about-table">
-        <table class="promo">
-          <caption class="table-caption">С 2004 года любим точность во всём:</caption>
-          <tr class="row-1">
-            <th class="tb-head">146%</th>
-            <th class="tb-head">100%</th>
-            <th class="tb-head">50%</th>
-          </tr>
-          <tr class="row-2">
-            <td class="tb-data">Уровень самоотдачи</td>
-            <td class="tb-data">Соблюдение сроков</td>
-            <td class="tb-data">Минимальная предоплата</td>
-          </tr>
-        </table>
+        <div class="table-wrapper">
+          <table class="promo">
+            <caption class="table-caption">С 2004 года любим точность во всем:</caption>
+            <tr class="row-1">
+              <th class="tb-head">146<span class="">%</span></th>
+              <th class="tb-head">100<b>%</b></th>
+              <th class="tb-head">50<i>%</i></th>
+            </tr>
+            <tr class="row-2">
+              <td class="tb-data">Уровень самоотдачи</td>
+              <td class="tb-data">Соблюдение сроков</td>
+              <td class="tb-data">Минимальная предоплата</td>
+            </tr>
+          </table>
+        </div>
       </section>
     </div>
-    <div class="partners-wrapper">
-      <section class="partners">
-        <h2>Наши партнёры </h2>
-        <ul class="partners-list">
-          <li class="partners-item">
-            <a class="partners-link" href="https://htmlacademy.ru/intensive/htmlcss">
-              <img class="academy" src="https://via.placeholder.com/150x100" alt="HTML academy">
-            </a>
-          </li>
-          <li class="partners-item">
-            <a class="partners-link" href="#">
-              <img class="barbershop" src="https://via.placeholder.com/150x100" alt="Барбершоп Бородинский">
-            </a>
-          </li>
-          <li class="partners-item">
-            <a class="partners-link" href="#">
-              <img class="pink" src="https://via.placeholder.com/150x100"
-                alt="Магазин приложений для iOS и Android Pink">
-            </a>
-          </li>
-          <li class="partners-item">
-            <a class="partners-link" href="#">
-              <img class="mishka" src="https://via.placeholder.com/150x100" alt="Магазин вязаных игрушек Mishka">
-            </a>
-          </li>
-        </ul>
-      </section>
-    </div>
+    <section class="partners">
+      <h2 class="visually-hidden">Наши партнёры </h2>
+      <ul class="partners-list">
+        <li class="partners-item">
+          <a class="partners-link link-academy" href="https://htmlacademy.ru/intensive/htmlcss">
+            <img class="academy" src="img/partners/academy.png" alt="Интерактивные курсы HTML academy">
+          </a>
+        </li>
+        <li class="partners-item">
+          <a class="partners-link link-barber" href="#">
+            <img class="barbershop" src="img/partners/barber.png" alt="Барбершоп Бородинский">
+          </a>
+        </li>
+        <li class="partners-item">
+          <a class="partners-link link-pink" href="#">
+            <img class="pink" src="img/partners/pink.png" alt="Магазин приложений для iOS и Android Pink">
+          </a>
+        </li>
+        <li class="partners-item">
+          <a class="partners-link link-mishka" href="#">
+            <img class="mishka" src="img/partners/mishka.png" alt="Магазин вязаных игрушек Mishka">
+          </a>
+        </li>
+      </ul>
+    </section>
   </main>
   <footer class="main-footer">
-    <!-- не понимаю, как сделать здесь сетку блока с картой(возможно z-index.) -->
+    <!--сделать здесь сетку блока с картой(возможно z-index.) -->
     <section class="footer-contacts">
-      <h2>Наши контакты</h2>
-      <img class="map" src="https://via.placeholder.com/150x100"
-        alt="Наш адрес: Санкт-Петербург, набережная реки Карповки дом 5, литера П">
-      <p class="address-head">
-        Nёrds design studio
-      </p>
-      <address class="address-text">
-        наб. Реки Карповки,
-        5 лит.П, Санкт-Петербург
-      </address>
-      <a class="address-tel-link" href="tel:+78005558628">+7 800 555-86-28</a>
-      <a class="address-mail-link" href="mailto:#">Напишите нам</a>
+      <h2 class="visually-hidden">Наши контакты</h2>
+      <div class="map-wrapper">
+        <img class="map-img" src="./img/map.png"
+          alt="Наш адрес: Санкт-Петербург, набережная реки Карповки дом 5, литера П">
+      </div>
+      <div class="map-google-container">
+        <iframe class="map-google"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1996.8226084133141!2d30.315220216028212!3d59.96826598188697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0x5f2ac55f567b2400!2sHTML%20Academy!5e0!3m2!1sru!2sru!4v1624285568869!5m2!1sru!2sru"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+      <div class="address-wrapper">
+        <p class="address-head">
+          Nёrds design studio
+        </p>
+        <address class="address-text">
+          наб. Реки Карповки,<br>
+          5 лит.П, Санкт-Петербург
+        </address>
+        <a class="address-tel-link" href="tel:+78005558628">+7 800 555-86-28</a>
+        <a class="address-mail-link" href="mailto:#">Напишите нам</a>
+      </div>
     </section>
     <div class="footer-social-wrapper">
       <section class="footer-social">
@@ -187,15 +190,20 @@
           <p class="social-light">Скидка 10% для друзей из социальных сетей</p>
         </div>
         <ul class="social-list">
-          <!-- позже добавить ссылкам класс visually-hidden -->
           <li class="social-item">
-            <a class="social-link" href="#">Вконтакте</a>
+            <a class="social-link link-vk" href="#">
+              <span class="visually-hidden">Вконтакте</span>
+            </a>
           </li>
           <li class="social-item">
-            <a class="social-link" href="#">Фейсбук</a>
+            <a class="social-link link-fb" href="#">
+              <span class="visually-hidden">Фейсбук</span>
+            </a>
           </li>
           <li class="social-item">
-            <a class="social-link" href="#">Инстаграмм</a>
+            <a class="social-link link-inst" href="#">
+              <span class="visually-hidden">Инстаграм</span>
+            </a>
           </li>
         </ul>
       </section>
