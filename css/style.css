@@ -36,7 +36,6 @@
   line-height: 24px;
   font-weight: 400;
   color: var(--text-basic);
-/* добавляю правила для гридов */
   min-height: 100%;
   display: grid;
   grid-template-rows: min-content 1fr min-content;
@@ -58,7 +57,6 @@
   background-color: transparent;
   display: grid;
   width: 1160px;
-  /* по центру отн родителя */
   margin: 0 auto;
   position: relative;
 }
@@ -522,23 +520,6 @@
   font-weight: 400;
 }
 
-/* .partners-wrapper{
-  outline: 5px solid rgba(0, 255, 0, 0.7);
-  width: 1160px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 260px 260px 260px 260px; 
-} */
-
-/* .partners{
-  outline: 5px solid rgba(0, 255, 0, 0.7);
-  width: 1160px;
-  min-height: 184px;
-  margin: 80px auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  align-items: center;
-} */
 
 .partners{
   width: 1160px;
@@ -551,9 +532,6 @@
   column-gap: 40px;
   margin: 0 auto;
   list-style: none;
-  /* display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between; */
   list-style: none;
   margin: 0 -66px;
   padding: 70px 53px;
@@ -588,14 +566,15 @@
 
 /* Catalog */
 .catalog-page{
-  width: 1160px;
-  margin: 0 auto;
+
 }
 
 .catalog-container{
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  width: 1160px;
+  margin: 0 auto;
 }
 
 .shop-header{
@@ -604,7 +583,16 @@
   font-weight: 500;
   margin: 0 auto;
   background-color: #eeeeee;
-  grid-column: 1 / -1;
+  text-align: center;
+  padding-top: 56px;
+  padding-bottom: 108px;
+}
+
+.shop-header-text{
+  max-width: 1160px;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 auto;
 }
 
 .form-filter{
@@ -615,6 +603,8 @@
 
 .filter-fieldset{
   border: none;
+  margin: 0;
+  padding: 0;
 }
 /* ползунки ***********************************************************/
 
@@ -622,21 +612,6 @@
   margin: 0;
   padding: 0;
   border: none;
-  /* Для демонстрации */
-  width: 260px;
-  margin: 50px auto; 
-}
-.bar{
-  width: 30%;
-  margin-left: 20%
-}
-
-.toggle.toggle-min{
-  left: 20%;
-}
-
-.toggle.toggle-max{
-  left: 5;
 }
 
 .range-filter {
@@ -646,7 +621,7 @@
 
 .filter-item legend {
   font-size: 18px;
-  line-height: 24px;
+  line-height: 30px;
   text-transform: uppercase;
   font-weight: 700;
 }
@@ -671,6 +646,7 @@
   width: 70%;
   height: 2px;
   background: #00ca74;
+  margin-left: 0;
 }
 
 .range-controls .toggle {
@@ -688,7 +664,7 @@
 }
 
 .range-controls .toggle-min {
-  left: 16px;
+  left: 18px;
 }
 
 .range-controls .toggle-max {
@@ -707,9 +683,10 @@
 }
 
 .price-controls input {
-  width: 60px;
-  padding: 10px;
-  margin-left: 10px;
+  width: 80px;
+  padding: 0;
+  height: 38px;
+  margin-left: 8px;
   text-align: center;
   color: #283136;
   border: none;
@@ -717,6 +694,7 @@
   background: #f1f1f1;
   font-family: inherit;
   font-size: inherit;
+  border-radius: 3px;
 }
 
 /* ползунки ***********************************************************/
@@ -738,6 +716,7 @@
   font-size: 18px;
   line-height: 30px;
   font-weight: 700;
+  text-transform: uppercase;
 }
 
 .grid-item{
@@ -759,7 +738,7 @@
   font-size: 16px;
   line-height: 20px;
   color: var(--text-basic);
-}/* похоже этого достаточно, т.к. текст цвет не меняет при наведении */
+}
 
 .input-grid-radio + label::before{
   content: "";
@@ -768,7 +747,7 @@
   top: 0;
   width: 25px;
   height: 25px;
-  border: 4px solid #4D4D4D;
+  border: 4px solid rgba(77, 77, 77, 0.4);
   border-radius: 50%;
   box-sizing: border-box;
 }
@@ -780,18 +759,30 @@
   left: -34px;
   width: 9px;
   height: 9px;
-  background: #4D4D4D;
+  background: rgba(77, 77, 77, 0.4);
   border-radius: 50%;
   box-sizing: border-box;
   display: none;
+}
+
+.radio-label:hover::after{
+  background: #4d4d4d;
+}
+
+.radio-label:hover::before{
+  border-color: #4d4d4d;
 }
 
 .input-grid-radio:checked + label::after{
   display: block;
 }
 
-.input-grid-radio:focus + label{
-  color:red;
+.input-grid-radio:focus + label::after{
+  background: #4d4d4d;
+}
+
+.input-grid-radio:focus + label::before{
+  border-color: #4d4d4d;
 }
 
 /* Фильтр по особенностям */
@@ -799,17 +790,107 @@
   font-size: 18px;
   line-height: 30px;
   font-weight: 700;
+  text-transform: uppercase;
 }
 
 .filter-feature{
   list-style: none;
+  position: relative;
+  display: block;
+  margin: 0;
+  padding: 0;
 }
 
-.input-feature-checkbox+label{
+.checkbox{
+  min-height: 27px;
+}
+
+.checkbox-label{
   font-size: 16px;
   line-height: 20px;
   color: var(--text-basic);
+  position: relative;
+  padding-left: 37px;
+  padding-top: 2px;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: top;
+  min-height: 23px;
 }
+
+.checkbox-input + label::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 23px;
+  height: 23px;
+  border: 2px solid rgba(77, 77, 77, 0.4);
+  box-sizing: border-box;
+  border-radius: 3px;
+  z-index: 1;
+}
+
+.checkbox-input:hover + label::before{
+  border-color: #4d4d4d;
+}
+
+.checkbox-input:focus + label::before{
+  border-color: #4d4d4d;
+}
+
+.checkbox-spec{
+  height: 7px;
+  width: 19px;
+  background: white;
+  position: absolute;
+  display: block;
+  left: 11px;
+  top: 4px;
+  transform: rotate(-45deg);
+  z-index: 2;
+}
+
+.checkbox-spec:hover{
+  border-color: #4d4d4d;
+}
+
+.checkbox-spec:focus{
+  border-color: #4d4d4d;
+}
+
+ /* А как сделать для checked */
+.checkbox-input:checked + label::after{
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 3px;
+  width: 19px;
+  height: 11px;
+  box-sizing:  border-box;
+  border-left: 4px solid rgba(77, 77, 77, 0.4);
+  border-bottom: 4px solid rgba(77, 77, 77, 0.4);
+  transform: rotate(-45deg);
+  z-index: 3;
+}
+
+.checkbox-input:checked + label::after{
+  display: block;
+}
+
+.checkbox-input:checked:hover + label::after{
+  border-color: #4d4d4d;
+}
+
+.checkbox-input:checked:focus + label::after{
+  border-color: #4d4d4d;
+}
+ 
+.feature-item{
+  margin-bottom: 20px;
+}
+
+
 /* Кнопка "показать" */
 .filter-btn{
   font-size: 16px;
@@ -846,13 +927,77 @@ border-radius: 3px;
   font-size: 18px;
   line-height: 30px;
   font-weight: 700;
-  grid-column: 1 / -1;
+  text-transform: uppercase;
 }
 
 .sort-list{
   list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
 }
-/* кнопки сортиовки с треугольниками */
+
+.sort-list-item{
+  margin: 25px;
+}
+
+.direction-list{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+}
+.direction-item{
+  position: relative;
+
+}
+
+.direction-link{
+  display: block;
+}
+
+.direction-increase::after{
+  content: "";
+  position: absolute;
+  top: 26px;
+  left: 11px;
+  width: 17px;
+  height: 18px;
+  background-image: url(../img/catalog/black.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  transform: rotate(118deg);
+}
+
+.direction-increase:hover:after{
+  /* background-image: url(../img/catalog/gray.svg) */
+  opacity: 0.3;
+  
+}
+
+.direction-increase:focus::after{
+  /* background-image: url(../img/catalog/gray.svg) */
+  opacity: 0.3;
+}
+/* ????????????????????????????????????????????????????? */
+
+/* доделать по примеру слайдов   подчеркивание классом для шапки*/
+
+.direction-decrease::after{
+  content: "";
+  position: absolute;
+  top: 34px;
+  left: 43px;
+  width: 16px;
+  height: 18px;
+  background-image: url(../img/catalog/black.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  transform: rotate(60deg);
+}
+
+
+
 .button-link{
   text-decoration: none;
   font-size: 14px;
@@ -1001,27 +1146,48 @@ box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
 /* Пагинация */
 .pagination-list{
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .pagination-item{
-  width: 50px;
-  height: 50px;
+  width: 47px;
+  height: 47px;
   background: #EEEEEE;
   border-radius: 3px;
   display: inline-block;
+  margin-right: 11px;
+  border: 3px solid #EEEEEE;
+
 }
+
+.item-current{
+  background: #FFFFFF;
+  border: 3px solid #DBDBDB;
+  
+}
+/* Так не получается с границей */
+/* возможно сделать эл-т по 47 и добавить бордер 3px всем */
 .pagination-page{
   text-decoration: none;
   font-size: 16px;
   line-height: 18px;
   font-weight: 500;
   color: var(--text-add);
-  background-color: var(--pagination-rest);
+  text-transform: uppercase;
+  display: block;
+  /* padding-left: 18px;
+  padding-top: 15px; */
+  padding: 14px 23px 17px 18px;
+  box-sizing: border-box;
 }
 
 .page-next{
-  width: 103px;
+  min-width: 260px;
+  min-height: 47px;
   text-align: center;
+  padding: 0;
+  margin: 0;
 }
 
 .pagination-page:hover,
@@ -1033,15 +1199,7 @@ box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
   background-color: var(--pagination-active);
 }
 /* здесь тоже доделать полупрозрачность текста */
-.pagination-page-current{
-  text-decoration: none;
-  font-size: 16px;
-  line-height: 18px;
-  font-weight: 500;
-  color: var(--text-add);
-  background-color: var(--current);
-  border: 3px solid var(--text-add);
-}
+
 /* FOOTER ******************************************************/
 
 .footer-contacts{
@@ -1107,6 +1265,8 @@ box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
 
 .social-promo{
   order:1;
+  margin-top: -25px;
+  padding: 0 130px;
 }
 /* Адресный пункт */
 .address-head{
@@ -1144,12 +1304,14 @@ box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
   font-size: 36px;
   line-height: 36px;
   font-weight: 700;
+  margin-top: 31px;
 }
 
 .social-light{
   font-size: 16px;
   line-height: 22px;
   font-weight: 400;
+  margin-top: 10px;
 }
 
 .address-mail-link{
@@ -1241,4 +1403,117 @@ box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
   background-image: url("../img/social/insta.svg");
   width: 21px;
   height: 21px;
+}
+
+.modal-letter{
+  top: 120px;
+  bottom: auto;
+  width: 960px;
+  height: 590px;
+  padding: 50px 80px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  color: var(--basic-black);
+  background-color: #FFFFFF;
+  background-position: 0 0;
+  background-repeat: repeat;
+  box-shadow:  0px 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.modal-close {
+  position: absolute;
+  top: 0;
+  right: -34px;
+  width: 22px;
+  height: 22px;
+  background-color: red;
+  border: 0;
+  cursor: pointer;
+}
+
+
+.form-header{
+  font-size: 45px;
+  line-height: 53px;
+}
+
+.field-description{
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 700;
+}
+
+.letter-form input[type="text"],
+.letter-form input[type="email"]{
+  box-sizing: border-box;
+  width: 300px;
+  padding-top: 10px;
+  padding-right: 40px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  font: inherit;
+  color: black;
+  background-color: #ffffff;
+  border: 2px solid #D7DCDE;
+  border-radius: 3px;
+}
+
+.letter-form input[type="text"]:hover,
+.letter-form input[type="email"]:hover{
+  border: 2px solid #b4b9bb;
+}
+
+.letter-form textarea{
+  width: 760px;
+  min-height: 118px;
+  box-sizing: border-box;
+  font: inherit;
+  color: black;
+  background-color: #ffffff;
+  border: 2px solid #D7DCDE;
+}
+
+.letter-form textarea:hover{
+  border: 2px solid #b4b9bb;
+}
+
+
+.button-letter{
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 500;
+    vertical-align: middle;
+    text-decoration: none;
+    background-color: var(--button-red-rest);
+    color: var(--button-link-know);
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 18px 20px 16px;
+    border-radius: 3px;
+    box-sizing: border-box;
+    text-align: center;
+    width: 259px;
+    height: 50px;
+    border: none;
+    /* доступно ли убрать бордер? */
+}
+
+.button-letter:hover,
+.button-letter:focus{
+  outline: none;
+  background-color: var(--button-red-hover);
+  color: var(--button-link-know);
+}
+
+.button-letter:active{
+  outline: none;
+  background-color:var(--button-red-active);
+  color: rgba(255, 255, 255, 0.3);
 }

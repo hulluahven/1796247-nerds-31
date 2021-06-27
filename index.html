@@ -209,6 +209,24 @@
       </section>
     </div>
   </footer>
+  <section class="modal modal-letter">
+    <h2 class="form-header">Напишите нам</h2>
+    <form class="letter-form" action="https://echo.htmlacademy.ru" method="post">
+      <p class="field-description">Ваше имя:</p>
+      <label class="visually-hidden" for="letter-name">Ваше имя</label>
+      <input class="name-field" id="letter-name" type="text" name="name" placeholder="Имя Фамилия">
+      <p class="field-description">Ваш email</p>
+      <label class="visually-hidden" for="letter-mail">Ваша почта</label>
+      <input class="mail-field" id="letter-mail" type="email" name="login" placeholder="email@example.com">
+      <p class="field-description">Текст письма</p>
+      <label class="visually-hidden" for="letter-text">Напишите письмо здесь</label>
+      <textarea class="free-text" id="letter-text" rows="10" cols="45" name="text" placeholder="В свободной форме">
+      </textarea>
+      <button class="button-letter" type="submit">Отправить</button>
+    </form>
+    <button class="modal-close" type="button" aria-label="Закрыть"></button>
+    </form>
+  </section>
 </body>
 
 </html>
