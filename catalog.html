@@ -21,19 +21,19 @@
         <div class="main-nav-wrapper">
           <ul class="nav-list">
             <li class="nav-item ">
-              <a class="nav-link" href="#">Студия</a>
+              <a class="nav-link " href="#">Студия</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Клиенты</a>
             </li>
-            <li class="nav-item nav-item--underline">
-              <a class="nav-link" href="catalog.html">Магазин</a>
+            <li class="nav-item">
+              <a class="nav-link nav-link--active" href="catalog.html">Магазин</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Контакты</a>
             </li>
           </ul>
-          <a class="nav-cart" href="#">Корзина</a>
+          <a class="nav-cart " href="#">Корзина</a>
         </div>
       </div>
     </nav>
@@ -55,15 +55,15 @@
                 <div class="scale">
                   <div class="bar"></div>
                 </div>
-                <div class="toggle toggle-min" tabindex="0"></div>
-                <div class="toggle toggle-max" tabindex="0"></div>
+                <div class="toggle toggle-min"></div>
+                <div class="toggle toggle-max"></div>
               </div>
               <div class="price-controls">
                 <label class="min-price">
                   от <input type="text" name="min-price" value="0">
                 </label>
                 <label class="max-price">
-                  до <input type="text" name="max-price" placeholder="150 000">
+                  до <input type="text" name="max-price" placeholder="  150 000">
                 </label>
               </div>
             </div>
@@ -92,27 +92,38 @@
             <legend class="legend-feature">Особенности:</legend>
             <ul class="filter-feature">
               <li class="feature-item checkbox">
-                <input class="visually-hidden checkbox-input" type="checkbox" name="slider" id="filter-slider"
-                  checked>
-                <label class="checkbox-label" for="filter-slider"><em class="checkbox-spec"></em>Слайдер</label>
+                <input class="visually-hidden checkbox-input" type="checkbox" name="slider" id="filter-slider" checked>
+                <label class="checkbox-label" for="filter-slider">
+                  <em class="checkbox-spec"></em>
+                  Слайдер
+                </label>
               </li>
               <li class="feature-item checkbox">
-                <input class="visually-hidden checkbox-input" type="checkbox" name="features"
-                  id="filter-features">
-                <label class="checkbox-label" for="filter-features">Блок преимуществ</label>
+                <input class="visually-hidden checkbox-input" type="checkbox" name="features" id="filter-features">
+                <label class="checkbox-label" for="filter-features">
+                  <em class="checkbox-spec"></em>
+                  Блок преимуществ
+                </label>
               </li>
               <li class="feature-item checkbox">
-                <input class="visually-hidden checkbox-input" type="checkbox" name="news" id="filter-news"
-                  checked>
-                <label class="checkbox-label" for="filter-news">Новости</label>
+                <input class="visually-hidden checkbox-input" type="checkbox" name="news" id="filter-news" checked>
+                <label class="checkbox-label" for="filter-news">
+                  <em class="checkbox-spec"></em>
+                  Новости
+                </label>
               </li>
               <li class="feature-item checkbox">
                 <input class="visually-hidden checkbox-input" type="checkbox" name="galery" id="filter-galery">
-                <label class="checkbox-label" for="filter-galery">Галерея</label>
+                <label class="checkbox-label" for="filter-galery">
+                  <em class="checkbox-spec"></em>Галерея
+                </label>
               </li>
               <li class="feature-item checkbox">
                 <input class="visually-hidden checkbox-input" type="checkbox" name="cart" id="filter-cart">
-                <label class="checkbox-label" for="filter-cart">Корзина</label>
+                <label class="checkbox-label" for="filter-cart">
+                  <em class="checkbox-spec"></em>
+                  Корзина
+                </label>
               </li>
             </ul>
           </fieldset>
@@ -124,9 +135,15 @@
         <div class="sort-container">
           <h4 class="sort-head">Сортировать:</h4>
           <ul class="sort-list">
-            <li class="sort-list-item"><a class="button-link" href="#">По цене</a></li>
-            <li class="sort-list-item"><a class="button-link" href="#">По типу</a></li>
-            <li class="sort-list-item"><a class="button-link" href="#">По названию</a></li>
+            <li class="sort-list-item">
+              <a class="sort-link sort-link--active" href="#">По цене</a>
+            </li>
+            <li class="sort-list-item">
+              <a class="sort-link" href="#">По типу</a>
+            </li>
+            <li class="sort-list-item">
+              <a class="sort-link" href="#">По названию</a>
+            </li>
           </ul>
           <ul class="direction-list">
             <li class="direction-item">
@@ -134,13 +151,12 @@
             </li>
             <li class="direction-item">
               <a class="direction-link direction-decrease" href="#" aria-label="по убыванию"></a>
-              <!-- прописать ариа Label + focus/hover -->
-              <!-- сортировка по возрастанию  -->
             </li>
           </ul>
         </div>
         <ul class="product-list">
           <li class="product-item">
+            <figure class="circle"></figure>
             <figure class="product-img">
               <img class="sedona-img" src="img/catalog/sedona.jpg" width="359" height="578"
                 alt="Информационный сайт для туристов.">
@@ -152,6 +168,7 @@
             </div>
           </li>
           <li class="product-item">
+            <figure class="circle"></figure>
             <figure class="product-img">
               <img class="pink-img" src="img/catalog/pink.jpg" width="359" height="578"
                 alt="Продуктовый лендинг приложений для iOS и Android.">
@@ -163,6 +180,7 @@
             </div>
           </li>
           <li class="product-item">
+            <figure class="circle"></figure>
             <figure class="product-img">
               <img class="barbershop" src="img/catalog/barbershop.jpg" width="359" height="578"
                 alt="Сайт салона красоты для мужчин.">
@@ -174,6 +192,7 @@
             </div>
           </li>
           <li class="product-item">
+            <figure class="circle"></figure>
             <figure class="product-img">
               <img class="mishka" src="img/catalog/mishka.jpg" width="359" height="578"
                 alt="Интернет-магазин вязаных игрушек">
@@ -185,6 +204,7 @@
             </div>
           </li>
           <li class="product-item">
+            <figure class="circle"></figure>
             <figure class="product-img">
               <img class="a-plus" src="img/catalog/aplus.jpg" width="359" height="578"
                 alt="Лендинг курсов повышения квалификации">
@@ -196,6 +216,7 @@
             </div>
           </li>
           <li class="product-item">
+            <figure class="circle"></figure>
             <figure class="product-img">
               <img class="kvast" src="img/catalog/kvast.jpg" width="359" height="578"
                 alt="Промо-сайт производителя крафтового кваса">
@@ -208,24 +229,23 @@
           </li>
         </ul>
         <ul class="pagination-list">
-          <li class="pagination-item item-current">
-            <a class="pagination-page">1</a>
+          <li class="pagination-item">
+            <a class="pagination-link pagination-link--current">1</a>
           </li>
           <li class="pagination-item">
-            <a class="pagination-page" href="#">2</a>
+            <a class="pagination-link" href="#">2</a>
           </li>
           <li class="pagination-item">
-            <a class="pagination-page" href="#">3</a>
+            <a class="pagination-link" href="#">3</a>
           </li>
-          <li class="pagination-item page-next ">
-            <a class="pagination-page" href="#">Следующая</a>
+          <li class="pagination-item">
+            <a class="pagination-link link-next" href="#">Следующая</a>
           </li>
         </ul>
       </section>
     </div>
   </main>
   <footer class="main-footer">
-    <!--сделать здесь сетку блока с картой(возможно z-index.) -->
     <section class="footer-contacts">
       <h2 class="visually-hidden">Наши контакты</h2>
       <div class="map-wrapper">
@@ -248,6 +268,7 @@
         <a class="address-tel-link" href="tel:+78005558628">+7 800 555-86-28</a>
         <a class="address-mail-link" href="mailto:#">Напишите нам</a>
       </div>
+      <figure class="marker"></figure>
     </section>
     <div class="footer-social-wrapper">
       <section class="footer-social">
@@ -275,6 +296,33 @@
       </section>
     </div>
   </footer>
+  <section class="modal modal-letter">
+    <div class="form-wrapper">
+      <h2 class="form-header">Напишите нам</h2>
+      <form class="letter-form" action="https://echo.htmlacademy.ru" method="post">
+        <!-- <div class="name"> -->
+          <p class="field-description">Ваше имя:</p>
+          <label class="visually-hidden" for="letter-name">Ваше имя</label>
+          <input class="name-field" id="letter-name" type="text" name="name" placeholder="Имя Фамилия">
+        <!-- </div> -->
+        <!-- <div class="mail"></div> -->
+          <p class="field-description">Ваш email:</p>
+          <label class="visually-hidden" for="letter-mail">Ваша почта</label>
+          <input class="mail-field" id="letter-mail" type="email" name="login" placeholder="email@example.com">
+        <!-- </div> -->
+        <!-- <div class="letter"> -->
+        <p class="field-description">Текст письма:</p>
+        <label class="visually-hidden" for="letter-text">Напишите письмо здесь</label>
+        <textarea class="free-text" id="letter-text" rows="10" cols="45" name="text" placeholder="В свободной форме">
+        </textarea>
+        <!-- </div> -->
+        <button class="button-letter" type="submit">Отправить</button>
+      </form>
+      <button class="modal-close" type="button" aria-label="Закрыть"></button>
+      </form>
+    </div>
+  </section>
+  <script src="./js/script.js"></script>
 </body>
 
 </html>

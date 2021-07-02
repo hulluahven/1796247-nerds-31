@@ -13,7 +13,7 @@
 <body class="page-body">
   <header class="main-header">
     <nav class="main-nav">
-      <a class="header-logo">
+      <a class="header-logo ">
         <img class="header-logo-img" src="img/nerds-logo.svg" width="160" height="65"
           alt="Логотип интренет-магазина Нёрдс">
       </a>
@@ -44,7 +44,7 @@
     <section class="our-features">
       <h2 class="visually-hidden">Наши преимущества</h2>
       <ul class="slider-list">
-        <li class="slider-item slider-item--first">
+        <li class="slider-item slider-item--active slider-item--first">
           <p class="slider-head slider-head--first">Долго, дорого, скрупулезно.</p>
           <p class="slider-text slider-text--first">
             Математически выверенный дизайн<br>для вашего сайта или мобильного приложения.
@@ -58,7 +58,7 @@
           </p>
           <a class="slider-link slider-link--second" href="#">Узнать больше</a>
         </li>
-        <li class="slider-item slider-item--active slider-item--third">
+        <li class="slider-item  slider-item--third">
           <p class="slider-head slider-head--third">Только ночь, только хардкор</p>
           <p class="slider-text slider-text--third">Работать днем, как все? Мы против этого. Ближе к полуночи работа
             только начинается.</p>
@@ -67,13 +67,14 @@
       </ul>
       <ul class="slider-nav">
         <li class="slider-nav-item">
-          <a class="slider-nav-link slider-nav-link--active" aria-label="Первый экран слайдера" href="#"></a>
+          <a class="slider-nav-link slider-nav-link--active" data-slider="slider-item--first"
+            aria-label="Первый экран слайдера" href="#"></a>
         </li>
         <li class="slider-nav-item">
-          <a class="slider-nav-link" aria-label="Второй экран слайдера" href="#"></a>
+          <a class="slider-nav-link" data-slider="slider-item--second" aria-label="Второй экран слайдера" href="#"></a>
         </li>
         <li class="slider-nav-item">
-          <a class="slider-nav-link" aria-label="Третий экран слайдера" href="#"></a>
+          <a class="slider-nav-link" data-slider="slider-item--third" aria-label="Третий экран слайдера" href="#"></a>
         </li>
       </ul>
     </section>
@@ -159,7 +160,6 @@
     </section>
   </main>
   <footer class="main-footer">
-    <!--сделать здесь сетку блока с картой(возможно z-index.) -->
     <section class="footer-contacts">
       <h2 class="visually-hidden">Наши контакты</h2>
       <div class="map-wrapper">
@@ -180,8 +180,9 @@
           5 лит.П, Санкт-Петербург
         </address>
         <a class="address-tel-link" href="tel:+78005558628">+7 800 555-86-28</a>
-        <a class="address-mail-link" href="mailto:#">Напишите нам</a>
+        <a class="address-mail-link" href="#">Напишите нам</a>
       </div>
+      <figure class="marker"></figure>
     </section>
     <div class="footer-social-wrapper">
       <section class="footer-social">
@@ -210,23 +211,32 @@
     </div>
   </footer>
   <section class="modal modal-letter">
-    <h2 class="form-header">Напишите нам</h2>
-    <form class="letter-form" action="https://echo.htmlacademy.ru" method="post">
-      <p class="field-description">Ваше имя:</p>
-      <label class="visually-hidden" for="letter-name">Ваше имя</label>
-      <input class="name-field" id="letter-name" type="text" name="name" placeholder="Имя Фамилия">
-      <p class="field-description">Ваш email</p>
-      <label class="visually-hidden" for="letter-mail">Ваша почта</label>
-      <input class="mail-field" id="letter-mail" type="email" name="login" placeholder="email@example.com">
-      <p class="field-description">Текст письма</p>
-      <label class="visually-hidden" for="letter-text">Напишите письмо здесь</label>
-      <textarea class="free-text" id="letter-text" rows="10" cols="45" name="text" placeholder="В свободной форме">
-      </textarea>
-      <button class="button-letter" type="submit">Отправить</button>
-    </form>
-    <button class="modal-close" type="button" aria-label="Закрыть"></button>
-    </form>
+    <div class="form-wrapper">
+      <h2 class="form-header">Напишите нам</h2>
+      <form class="letter-form" action="https://echo.htmlacademy.ru" method="post">
+        <!-- <div class="name"> -->
+          <p class="field-description">Ваше имя:</p>
+          <label class="visually-hidden" for="letter-name">Ваше имя</label>
+          <input class="name-field" id="letter-name" type="text" name="name" placeholder="Имя Фамилия">
+        <!-- </div> -->
+        <!-- <div class="mail"></div> -->
+          <p class="field-description">Ваш email:</p>
+          <label class="visually-hidden" for="letter-mail">Ваша почта</label>
+          <input class="mail-field" id="letter-mail" type="email" name="login" placeholder="email@example.com">
+        <!-- </div> -->
+        <!-- <div class="letter"> -->
+        <p class="field-description">Текст письма:</p>
+        <label class="visually-hidden" for="letter-text">Напишите письмо здесь</label>
+        <textarea class="free-text" id="letter-text" rows="10" cols="45" name="text" placeholder="В свободной форме">
+        </textarea>
+        <!-- </div> -->
+        <button class="button-letter" type="submit">Отправить</button>
+      </form>
+      <button class="modal-close" type="button" aria-label="Закрыть"></button>
+      </form>
+    </div>
   </section>
+  <script src="./js/script.js"></script>
 </body>
 
 </html>
