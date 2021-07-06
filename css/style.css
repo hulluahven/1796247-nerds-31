@@ -485,14 +485,6 @@
   background: #eeeeee;
 }
 
-.sample{
-  width: 100px;
-  height: 100px;
-  background: red;
-  transition: all 4s;
-  width: 200px;
-}
-
 .about-us{
   margin: 0;
   padding: 0;
@@ -1053,6 +1045,7 @@ border-radius: 3px;
   position: relative;
 }
 
+
 .direction-link{
   display: block;
 }
@@ -1073,6 +1066,10 @@ border-radius: 3px;
 
 .direction-decrease .direction-svg{
   transform: rotate(60deg);
+}
+
+.direction-svg--active{
+  fill: rgb(35, 31, 32);
 }
 
 .sort-link{
@@ -1666,7 +1663,6 @@ box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
 
 .field-input-container{
   display: flex;
-  /* можно обернуть все текст письма+ (100% +50+50) */
   flex-wrap: wrap;
   justify-content: space-around;
 }

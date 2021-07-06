@@ -3,23 +3,25 @@ let sortList = document.querySelector(".sort-list");
 let addressMailLink = document.querySelector(".address-mail-link");
 let modalLetter = document.querySelector(".modal-letter");
 let modalClose = document.querySelector(".modal-close");
-let nameField = document.querySelector(".name-field")
+let nameField = document.querySelector(".name-field");
 // let letterForm = document.querySelector(".letter-form");
-// let mailField = document.querySelector(".mail-field")
+// let mailField = document.querySelector(".mail-field");
+let directionList = document.querySelector(".direction-list");
+let directionButtons = document.querySelector(".direction-svg");
 
-if(sliderLinks){
+if(directionButtons){
 
-sliderLinks.forEach(function(el){
-    el.addEventListener("click", function(evt){
-        evt.preventDefault();
-        document.querySelector(".slider-item--active").classList.remove("slider-item--active");
-        document.querySelector("." + this.dataset.slider).classList.add("slider-item--active");
-        document.querySelector(".slider-nav-link--active").classList.remove("slider-nav-link--active");
-        this.classList.add("slider-nav-link--active");
-    });
-
-});
+    directionButtons.forEach(function(el){
+        el.addEventListener("click", function(evt){
+            evt.preventDefault();
+            document.querySelector(".direction-svg--active").classList.remove("direction-svg--active");
+            document.querySelector("." + this.dataset.direction).classList.add("direction-svg--active");
+           
+            
+        });
+    };
 }
+
 
 if(sortList){
 sortList.addEventListener("click", function(evt){
@@ -30,6 +32,18 @@ sortList.addEventListener("click", function(evt){
 });
 
 }
+
+// почему-то не убирает класс с сортирвки
+
+// if(directionButtons){
+// directionList.addEventListener("click", function(evt){
+//     evt.preventDefault();
+//     if(evt.target.tagName != 'A') return;
+//     document.querySelector(".direction-svg--active").classList.remove("direction-svg--active");
+//     evt.target.classList.add("direction-svg--active");
+//     });
+//     }
+// Не работат, почему-пока не понял
 
 if(addressMailLink){
     addressMailLink.addEventListener("click", function(evt){
@@ -56,7 +70,7 @@ modalLetter.addEventListener("click", function(evt){
         modalLetter.classList.remove("modal--show");
     }
 }
-}, false);
+},   true);
 
 
 
