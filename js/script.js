@@ -3,6 +3,9 @@ let sortList = document.querySelector(".sort-list");
 let addressMailLink = document.querySelector(".address-mail-link");
 let modalLetter = document.querySelector(".modal-letter");
 let modalClose = document.querySelector(".modal-close");
+let nameField = document.querySelector(".name-field")
+// let letterForm = document.querySelector(".letter-form");
+// let mailField = document.querySelector(".mail-field")
 
 if(sliderLinks){
 
@@ -25,11 +28,14 @@ sortList.addEventListener("click", function(evt){
     document.querySelector(".sort-link--active").classList.remove("sort-link--active");
     evt.target.classList.add("sort-link--active");
 });
+
 }
+
 if(addressMailLink){
     addressMailLink.addEventListener("click", function(evt){
         evt.preventDefault();
         modalLetter.classList.add("modal--show");
+        nameField.focus();
     });
 
 }
@@ -39,3 +45,13 @@ if(modalClose){
         modalLetter.classList.remove("modal--show")
     });
 }
+
+// if(letterForm){
+//     letterForm.addEventListener("submit", function(evt){
+//         if(!nameField.value || !mailField.value) {
+//         evt.preventDefault();
+
+//     } else {
+//         localStorage.setItem("name", nameField.value);
+//     }
+// });

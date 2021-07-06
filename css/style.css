@@ -71,10 +71,13 @@
   top: -27px;
 }
 
-/* .catalog-logo:hover{
-/* color: rgba(0, 0, 0, 0.3); */
-/* opacity: 0.7; */
-} 
+.header-logo-shop:hover,
+.header-logo-shop:focus{
+  opacity: 0.7;
+}
+.header-logo-shop:active{
+  opacity: 0.3;
+}
 
 .main-nav-wrapper{
   display: grid;
@@ -87,7 +90,7 @@
 
 .nav-list{
   margin: 0;
-  padding: 0px 426px 0 336px;
+  padding: 0px 426px 0 326px;
   list-style: none;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -164,7 +167,6 @@
   background-image: url("../img/cart-icon.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
-
 }
 
 .visually-hidden{
@@ -310,7 +312,6 @@
   color: rgba(255, 255, 255, 0.3);
   background-color: var(--button-red-active);
 }
-
 
 .slider-nav{
   padding: 0;
@@ -548,39 +549,33 @@
 
 }
 
-.table-caption{
-  display: table-caption;
+.promo-header{
   font-size: 16px;
   line-height: 24px;
   font-weight: 700;
   text-transform: uppercase;
-  margin: 3px 12px 0px -4px;
+  margin: 4px 13px 0px 0px;
   padding: 0;
 }
 
-.row-1{
- padding: 0;
- margin: 0;
-}
-
-.row-2{
+.promo-list{
   padding: 0;
-  margin: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
 }
 
-.tb-head{
+.numbers{
   font-size: 45px;
   line-height: 64px;
   font-weight: 700;
-
 }
 
-.tb-data{
+.caption{
   font-size: 16px;
   line-height: 18px;
   font-weight: 400;
 }
-
 
 .partners{
   width: 1160px;
@@ -653,7 +648,6 @@
   height: 50px;
   border-right: 2px solid rgba(77, 77, 77, 0.4);
   box-sizing: border-box;
-
 }
 
 .partners-link:hover{
@@ -664,10 +658,6 @@
   opacity: 0.1;
 }
 
-/* ************************************************************ */
-/* Catalog inner-page */
-
-
 /* Catalog */
 
 .catalog-container{
@@ -676,6 +666,7 @@
   justify-content: space-between;
   width: 1160px;
   margin: 0 auto;
+  padding-top: 31px;
 }
 
 .shop-header{
@@ -686,7 +677,7 @@
   background-color: #eeeeee;
   text-align: center;
   padding-top: 56px;
-  padding-bottom: 139px;
+  padding-bottom: 108px;
 }
 
 .shop-header-text{
@@ -1017,6 +1008,8 @@ box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
 border-radius: 3px;
 }
 
+/* SORT BUTTONS */
+
 .sort-head{
   font-size: 18px;
   line-height: 30px;
@@ -1039,50 +1032,37 @@ border-radius: 3px;
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  width: 38px;
+  justify-content: space-between;
+  position: absolute;
+  right: 0;
+  top: 28px;
 
 }
 .direction-item{
   position: relative;
-
 }
 
 .direction-link{
   display: block;
 }
 
-.direction-increase::after{
-  content: "";
-  position: absolute;
-  top: 33px;
-  left: 46px;
-  width: 16px;
-  height: 18px;
-  background-image: url(../img/catalog/black.svg);
-  background-repeat: no-repeat;
-  background-position: 0 0;
+
+.direction-svg{
   transform: rotate(0deg);
+  fill: rgba(166, 166, 166, 0.2);
 }
 
-.direction-increase:hover:after{
-  background: rgba(166, 166, 166, 0.3);
-  /* filter: alpha(opacity=30); */
-  /* надо через rgba полупрозр */
+.direction-link:hover .direction-svg{
+  fill: #a6a6a6;
 }
 
-.direction-increase:focus::after{
-  opacity: 0.3;
+.direction-link:active .direction-svg{
+  fill: #231f20;
 }
 
-.direction-decrease::after{
-  content: "";
-  position: absolute;
-  top: 36px;
-  left: 69px;
-  width: 16px;
-  height: 18px;
-  background-image: url(../img/catalog/black.svg);
-  background-repeat: no-repeat;
-  background-position: 0 0;
+.direction-decrease .direction-svg{
   transform: rotate(60deg);
 }
 
@@ -1116,10 +1096,11 @@ border-radius: 3px;
 
 .sort-container{
   display: flex;
+  position: relative;
 }
 
 
-/* Стилизация карточек товаров */
+/* PRODUCT CARDS */
 
 .product-list{
   list-style: none;
@@ -1264,7 +1245,7 @@ background-color: var(--button-red-active);
 box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
 }
 
-/* Пагинация */
+/* PAGINATION */
 
 .pagination-list{
   list-style: none;
@@ -1299,11 +1280,10 @@ box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
   min-height: 50px;
   background: #EEEEEE;
   border-radius: 3px;
-  display: block;
-  padding-top: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  border: 3px solid transparent;
-  /* граница, чтоб цифры не прыгали */
 }
 
 .pagination-link--current{
@@ -1322,15 +1302,22 @@ box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
 
 .pagination-link:hover,
 .pagination-link:focus{
-  background-color: var(--pagination-hover);
+  background: #DFDFDF;
 }
 
 .pagination-link:active{
-  background-color: var(--pagination-active);
-  border: 3px solid #EEEEEE;
-  background-color: white;
+  background: #D5D5D5;
+  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+  border-radius: 3px;
 }
 
+.pagination-link--current:hover{
+  background: white;
+}
+
+.pagination-link--current:active{
+  box-shadow: none;
+}
 
 /* FOOTER  */
 
@@ -1401,7 +1388,7 @@ box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
   padding: 0 130px;
 }
 
-/* Адресный пункт */
+/* ADDRESS POINT*/
 
 .address-head{
   font-size: 18px;
@@ -1433,6 +1420,7 @@ box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
   display: block;
   margin-bottom: 37px;
 }
+
 
 .social-heavy{
   font-size: 36px;
@@ -1478,18 +1466,19 @@ box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
 }
 
 .marker{
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-    width: 318px;
-    min-height: 308px;
-    position: relative;
-    z-index: 20;
-    left: 50%;
-    margin-left: 208px;
-    box-sizing: border-box;
-    background-image: url(../img/map/marker.png);
-    background-repeat: no-repeat;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  width: 318px;
+  min-height: 308px;
+  position: relative;
+  z-index: 20;
+  left: 50%;
+  bottom: 29px;
+  margin-left: 208px;
+  box-sizing: border-box;
+  background-image: url(../img/map/marker.png);
+  background-repeat: no-repeat;
 }
 
 .social-list{
@@ -1556,6 +1545,8 @@ box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
   height: 21px;
 }
 
+/* MODAL-FORM */
+
 .modal-letter{
   top: 120px;
   bottom: auto;
@@ -1571,7 +1562,7 @@ box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
   right: 0;
   bottom: 0;
   left: 0;
-  margin: auto;
+  margin: 0 auto;
   color: var(--basic-black);
   background-color: #FFFFFF;
   background-position: 0 0;
@@ -1579,7 +1570,8 @@ box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
   box-shadow:  0px 20px 40px rgba(0, 0, 0, 0.4);
   display: none;
   width: 960px;
-  padding: 15px 0px 0 0px;
+  /* height: 590px; */
+  padding: 0;
   z-index: 100;
 }
 
@@ -1591,21 +1583,46 @@ box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
   display: block;
 }
 
-.modal-close {
+.modal-close{
   position: absolute;
-  top: 77px;
-  right: 93px;
+  top: 76px;
+  right: 89px;
   width: 22px;
   height: 22px;
-  background-color: red;
+  background-color: transparent;
   border: 0;
   cursor: pointer;
+  padding: 0;
+}
+
+.modal-close::after { 
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 0px;
+  width: 21px;
+  height: 21px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background: url(../img/close.png);
+  opacity: 0.3;
+}
+
+
+.modal-close:hover::after,
+.modal-close:focus::after{
+  opacity: 1;
+}
+
+
+.modal-close:active::after{
+  opacity: 0;
 }
 
 .form-header{
   font-size: 45px;
   line-height: 53px;
-  margin: 47px 0 0 96px;
+  margin: 63px 0 0 101px;
   padding: 0px 0 0 0;
 }
 
@@ -1613,39 +1630,23 @@ box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
   font-size: 16px;
   line-height: 18px;
   font-weight: 700;
-  margin-bottom: 8px;
-  margin-top: 15px;
+  margin: 34px 0 0 0;
 }
 
-/* .letter-form{
-  width: 761px;
-  height: 353px;
+.field-input-container{
   display: flex;
+  /* можно обернуть все текст письма+ (100% +50+50) */
   flex-wrap: wrap;
   justify-content: space-around;
-  margin: 0 auto;
 }
 
 .name{
- position: absolute;
-  top: 161px;
-  left: 99px; 
-  margin: 22px 36px 0 0px;
- } 
+  margin: 0px 0px 0px 77px;
+}
 
 .mail{
-  position: absolute;
-  top: 163px;
-  left: 499px; 
-  margin-top: 21px;
- } 
-
- .letter{
-  position: absolute;
-  top: 241px;
-  left: 99px;
-  margin: 0px 0 12px 2px;
-}  */
+  margin-right: 70px;
+}
 
 .letter-form input[type="text"],
 .letter-form input[type="email"]{
@@ -1660,6 +1661,7 @@ box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
   background-color: #ffffff;
   border: 2px solid #D7DCDE;
   border-radius: 3px;
+  margin: 16px 0px 0px 0px;
 }
 
 .letter-form input[type="text"]:hover,
@@ -1682,8 +1684,8 @@ box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
   border: 2px solid #b4b9bb;
 }
 
-
 .button-letter{
+  position: absolute;
   font-size: 16px;
   line-height: 18px;
   font-weight: 500;
@@ -1700,12 +1702,11 @@ box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
   width: 259px;
   height: 50px;
   border: none;
-  position: absolute;
-  top: 75%;
+  top: 456px;
   left: 101px;
   cursor: pointer;
 }
-    /* доступно ли убрать бордер? */
+  
 
 .button-letter:hover,
 .button-letter:focus{

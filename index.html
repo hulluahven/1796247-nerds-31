@@ -13,7 +13,7 @@
 <body class="page-body">
   <header class="main-header">
     <nav class="main-nav">
-      <a class="header-logo ">
+      <a class="header-logo">
         <img class="header-logo-img" src="img/nerds-logo.svg" width="160" height="65"
           alt="Логотип интренет-магазина Нёрдс">
       </a>
@@ -116,20 +116,16 @@
         </ul>
       </section>
       <section class="about-table">
-        <div class="table-wrapper">
-          <table class="promo">
-            <caption class="table-caption">С 2004 года любим точность во всем:</caption>
-            <tr class="row-1">
-              <th class="tb-head">146<span class="">%</span></th>
-              <th class="tb-head">100<b>%</b></th>
-              <th class="tb-head">50<i>%</i></th>
-            </tr>
-            <tr class="row-2">
-              <td class="tb-data">Уровень самоотдачи</td>
-              <td class="tb-data">Соблюдение сроков</td>
-              <td class="tb-data">Минимальная предоплата</td>
-            </tr>
-          </table>
+        <div class="promo-wrapper">
+          <p class="promo-header">С 2004 года любим точность во всем:</p>
+          <ul class="promo-list">
+            <li class="numbers">146<sup>%</sup></li>
+            <li class="caption">Уровень самоотдачи</li>
+            <li class="numbers">100<sup>%</sup></li>
+            <li class="caption">Соблюдение сроков</li>
+            <li class="numbers">50<sup>%</sup></li>
+            <li class="caption">Минимальная предоплата</li>
+          </ul>
         </div>
       </section>
     </div>
@@ -214,22 +210,30 @@
     <div class="form-wrapper">
       <h2 class="form-header">Напишите нам</h2>
       <form class="letter-form" action="https://echo.htmlacademy.ru" method="post">
-        <!-- <div class="name"> -->
-          <p class="field-description">Ваше имя:</p>
-          <label class="visually-hidden" for="letter-name">Ваше имя</label>
+       <div class="field-input-container">
+        <div class="name">
+          <p class="field-description field-description--name">Ваше имя:</p>
+          <label class="visually-hidden" for="letter-name">
+            Ваше имя
+          </label>
           <input class="name-field" id="letter-name" type="text" name="name" placeholder="Имя Фамилия">
-        <!-- </div> -->
-        <!-- <div class="mail"></div> -->
-          <p class="field-description">Ваш email:</p>
-          <label class="visually-hidden" for="letter-mail">Ваша почта</label>
+        </div>
+        <div class="mail">
+          <p class="field-description field-description--mail">Ваш email:</p>
+          <label class="visually-hidden" for="letter-mail">
+            Ваша почта
+          </label>
           <input class="mail-field" id="letter-mail" type="email" name="login" placeholder="email@example.com">
-        <!-- </div> -->
-        <!-- <div class="letter"> -->
-        <p class="field-description">Текст письма:</p>
-        <label class="visually-hidden" for="letter-text">Напишите письмо здесь</label>
-        <textarea class="free-text" id="letter-text" rows="10" cols="45" name="text" placeholder="В свободной форме">
+        </div>
+        <div class="letter">
+          <p class="field-description field-description--letter">Текст письма:</p>
+          <label class="visually-hidden" for="letter-text">
+            Напишите письмо здесь
+          </label>
+          <textarea class="free-text" id="letter-text" rows="10" cols="45" name="text" placeholder="В свободной форме">
         </textarea>
-        <!-- </div> -->
+        </div>
+       </div>
         <button class="button-letter" type="submit">Отправить</button>
       </form>
       <button class="modal-close" type="button" aria-label="Закрыть"></button>

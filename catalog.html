@@ -13,7 +13,7 @@
 <body class="page-body inner-page">
   <header class="main-header">
     <nav class="main-nav">
-      <a class="header-logo">
+      <a class="header-logo header-logo-shop" href="index.html">
         <img class="header-logo-img" src="img/nerds-logo.svg" width="160" height="65"
           alt="Логотип интренет-магазина Нёрдс">
       </a>
@@ -63,7 +63,7 @@
                   от <input type="text" name="min-price" value="0">
                 </label>
                 <label class="max-price">
-                  до <input type="text" name="max-price" placeholder="  150 000">
+                  до <input type="text" name="max-price" value="150 000">
                 </label>
               </div>
             </div>
@@ -147,10 +147,18 @@
           </ul>
           <ul class="direction-list">
             <li class="direction-item">
-              <a class="direction-link direction-increase" href="#" aria-label="по возрастанию"></a>
+              <a class="direction-link direction-increase" href="#" aria-label="по возрастанию">
+                <svg class="direction-svg" width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.5 10L0 0H11"/>
+                  </svg>
+              </a>
             </li>
             <li class="direction-item">
-              <a class="direction-link direction-decrease" href="#" aria-label="по убыванию"></a>
+              <a class="direction-link direction-decrease" href="#" aria-label="по убыванию">
+                <svg class="direction-svg" width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.5 10L0 0H11"/>
+                  </svg>
+              </a>
             </li>
           </ul>
         </div>
@@ -300,22 +308,23 @@
     <div class="form-wrapper">
       <h2 class="form-header">Напишите нам</h2>
       <form class="letter-form" action="https://echo.htmlacademy.ru" method="post">
-        <!-- <div class="name"> -->
+        <div class="field-input-container">
+        <div class="name-container">
           <p class="field-description">Ваше имя:</p>
           <label class="visually-hidden" for="letter-name">Ваше имя</label>
           <input class="name-field" id="letter-name" type="text" name="name" placeholder="Имя Фамилия">
-        <!-- </div> -->
-        <!-- <div class="mail"></div> -->
+        </div>
+        <div class="mail-container">
           <p class="field-description">Ваш email:</p>
           <label class="visually-hidden" for="letter-mail">Ваша почта</label>
           <input class="mail-field" id="letter-mail" type="email" name="login" placeholder="email@example.com">
-        <!-- </div> -->
-        <!-- <div class="letter"> -->
+        </div>
+        </div>
         <p class="field-description">Текст письма:</p>
         <label class="visually-hidden" for="letter-text">Напишите письмо здесь</label>
         <textarea class="free-text" id="letter-text" rows="10" cols="45" name="text" placeholder="В свободной форме">
         </textarea>
-        <!-- </div> -->
+       
         <button class="button-letter" type="submit">Отправить</button>
       </form>
       <button class="modal-close" type="button" aria-label="Закрыть"></button>
