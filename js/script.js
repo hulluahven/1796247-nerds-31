@@ -42,9 +42,24 @@ if(addressMailLink){
 if(modalClose){
     modalClose.addEventListener("click", function(evt){
         evt.preventDefault();
-        modalLetter.classList.remove("modal--show")
+        modalLetter.classList.remove("modal--show");
     });
 }
+
+modalLetter.addEventListener("click", function(evt){
+    console.log(evt.target);
+    console.log(modalLetter.classList.contains("modal--show"));
+    if(modalLetter.classList.contains("modal--show")){
+
+    
+    if(!evt.target.classList.contains("form-wrapper")){
+        modalLetter.classList.remove("modal--show");
+    }
+}
+}, false);
+
+
+
 
 // if(letterForm){
 //     letterForm.addEventListener("submit", function(evt){
