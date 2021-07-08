@@ -7,70 +7,58 @@ let nameField = document.querySelector(".name-field");
 // let letterForm = document.querySelector(".letter-form");
 // let mailField = document.querySelector(".mail-field");
 let directionList = document.querySelector(".direction-list");
-let directionButtons = document.querySelector(".direction-svg");
+let directionButtons = document.querySelectorAll(".direction-link");
 
-if(directionButtons){
+if (directionButtons) {
 
-    directionButtons.forEach(function(el){
-        el.addEventListener("click", function(evt){
+    directionButtons.forEach(function (el) {
+        el.addEventListener("click", function (evt) {
             evt.preventDefault();
             document.querySelector(".direction-svg--active").classList.remove("direction-svg--active");
-            document.querySelector("." + this.dataset.direction).classList.add("direction-svg--active");
-           
-            
+            this.querySelector(".direction-svg").classList.add("direction-svg--active");
+
         });
-    };
+    });
 }
 
 
-if(sortList){
-sortList.addEventListener("click", function(evt){
-    evt.preventDefault();
-    if(evt.target.tagName != 'A') return;
-    document.querySelector(".sort-link--active").classList.remove("sort-link--active");
-    evt.target.classList.add("sort-link--active");
-});
+if (sortList) {
+    sortList.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        if (evt.target.tagName != 'A') return;
+        document.querySelector(".sort-link--active").classList.remove("sort-link--active");
+        evt.target.classList.add("sort-link--active");
+    });
 
 }
 
-// почему-то не убирает класс с сортирвки
 
-// if(directionButtons){
-// directionList.addEventListener("click", function(evt){
-//     evt.preventDefault();
-//     if(evt.target.tagName != 'A') return;
-//     document.querySelector(".direction-svg--active").classList.remove("direction-svg--active");
-//     evt.target.classList.add("direction-svg--active");
-//     });
-//     }
-// Не работат, почему-пока не понял
-
-if(addressMailLink){
-    addressMailLink.addEventListener("click", function(evt){
+if (addressMailLink) {
+    addressMailLink.addEventListener("click", function (evt) {
         evt.preventDefault();
         modalLetter.classList.add("modal--show");
         nameField.focus();
     });
 
 }
-if(modalClose){
-    modalClose.addEventListener("click", function(evt){
+if (modalClose) {
+    modalClose.addEventListener("click", function (evt) {
         evt.preventDefault();
         modalLetter.classList.remove("modal--show");
     });
 }
 
-modalLetter.addEventListener("click", function(evt){
+modalLetter.addEventListener("click", function (evt) {
     console.log(evt.target);
     console.log(modalLetter.classList.contains("modal--show"));
-    if(modalLetter.classList.contains("modal--show")){
+    if (modalLetter.classList.contains("modal--show")) {
 
-    
-    if(!evt.target.classList.contains("form-wrapper")){
-        modalLetter.classList.remove("modal--show");
+
+        if (!evt.target.classList.contains("form-wrapper")) {
+            modalLetter.classList.remove("modal--show");
+        }
     }
-}
-},   true);
+}, true);
 
 
 
