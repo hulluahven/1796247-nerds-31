@@ -4,10 +4,21 @@ let addressMailLink = document.querySelector(".address-mail-link");
 let modalLetter = document.querySelector(".modal-letter");
 let modalClose = document.querySelector(".modal-close");
 let nameField = document.querySelector(".name-field");
-// let letterForm = document.querySelector(".letter-form");
-// let mailField = document.querySelector(".mail-field");
+let letterForm = document.querySelector(".letter-form");
+let mailField = document.querySelector(".mail-field");
 let directionList = document.querySelector(".direction-list");
 let directionButtons = document.querySelectorAll(".direction-link");
+
+sliderLinks.forEach(function (el) {
+    el.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        document.querySelector(".slider-item--active").classList.remove("slider-item--active");
+        document.querySelector("." + this.dataset.slider).classList.add("slider-item--active");
+        document.querySelector(".slider-nav-link--active").classList.remove("slider-nav-link--active");
+        this.classList.add("slider-nav-link--active");
+    });
+
+});
 
 if (directionButtons) {
 
@@ -21,7 +32,6 @@ if (directionButtons) {
     });
 }
 
-
 if (sortList) {
     sortList.addEventListener("click", function (evt) {
         evt.preventDefault();
@@ -32,7 +42,6 @@ if (sortList) {
 
 }
 
-
 if (addressMailLink) {
     addressMailLink.addEventListener("click", function (evt) {
         evt.preventDefault();
@@ -41,6 +50,7 @@ if (addressMailLink) {
     });
 
 }
+
 if (modalClose) {
     modalClose.addEventListener("click", function (evt) {
         evt.preventDefault();
@@ -48,27 +58,34 @@ if (modalClose) {
     });
 }
 
-modalLetter.addEventListener("click", function (evt) {
-    console.log(evt.target);
-    console.log(modalLetter.classList.contains("modal--show"));
-    if (modalLetter.classList.contains("modal--show")) {
+nameField.required = false;
+mailField.required = false;
+
+if (letterForm) {
+    letterForm.addEventListener("submit", function (evt) {
+        if (!nameField.value || !mailField.value) {
+            evt.preventDefault();
+
+            if (!nameField.value) {
+                nameField.classList.add("error");
+            }
+            if (!mailField.value) {
+                mailField.classList.add("error");
+            }
 
 
-        if (!evt.target.classList.contains("form-wrapper")) {
-            modalLetter.classList.remove("modal--show");
+        } else {
+            localStorage.setItem("name", nameField.value);
         }
-    }
-}, true);
+    });
+    nameField.addEventListener("focus", function (evt) {
+        this.classList.remove("error");
+    });
+
+    mailField.addEventListener("focus", function (evt) {
+        this.classList.remove("error");
+    });
+
+}
 
 
-
-
-// if(letterForm){
-//     letterForm.addEventListener("submit", function(evt){
-//         if(!nameField.value || !mailField.value) {
-//         evt.preventDefault();
-
-//     } else {
-//         localStorage.setItem("name", nameField.value);
-//     }
-// });

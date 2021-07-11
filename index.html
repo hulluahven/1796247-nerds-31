@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-  <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/normalize.min.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
   <title>HTML Academy: Нёрдс</title>
   <link rel="icon" href="favicon.ico">
 </head>
@@ -14,7 +14,7 @@
   <header class="main-header">
     <nav class="main-nav">
       <a class="header-logo">
-        <img class="header-logo-img" src="img/nerds-logo.svg" width="160" height="65"
+        <img class="header-logo-img" src="img/adds/nerds-logo.svg" width="160" height="65"
           alt="Логотип интренет-магазина Нёрдс">
       </a>
       <div class="header-bar">
@@ -36,7 +36,6 @@
           <a class="nav-cart" href="#">Корзина</a>
         </div>
       </div>
-      <a class="nav-cart" href="#">Корзина</a>
     </nav>
   </header>
   <main class="index-page">
@@ -116,23 +115,18 @@
         </ul>
       </section>
       <section class="about-table">
+        <h2 class="visually-hidden">Наши достижения </h2>
         <p class="promo-header">с 2004 года любим точность во всем:</p>
-        <table class="promo">
-          <thead>
-            <tr>
-              <th><span class="numbers">146<sup class="proc">%</sup></span></th>
-              <th><span class="numbers">100<sup class="proc">%</sup></span></th>
-              <th><span class="numbers">50<sup class="proc">%</sup></span></th>
-            </tr>
-          </thead>
-          <tbody class="table-sub">
-            <tr>
-              <td class="caption">Уровень самоотдачи</td>
-              <td class="caption">Соблюдение сроков</td>
-              <td class="caption">Минимальная предоплата</td>
-            </tr>
-          </tbody>
-        </table>
+
+        <ul class="promo-list">
+          <li class="numbers numbers--first">146<sup class="proc proc--first">%</sup></li>
+          <li class="numbers numbers--second">100<sup class="proc proc--second">%</sup></li>
+          <li class="numbers numbers--third">50<sup class="proc proc-third">%</sup></li>
+          <li class="caption caption--first">Уровень самоотдачи</li>
+          <li class="caption caption--second">Соблюдение сроков</li>
+          <li class="caption caption--third">Минимальная предоплата</li>
+        </ul>
+
       </section>
     </div>
     <section class="partners">
@@ -140,22 +134,22 @@
       <ul class="partners-list">
         <li class="partners-item">
           <a class="partners-link link-academy" href="https://htmlacademy.ru/intensive/htmlcss">
-            <img class="academy" src="img/partners/academy.png" alt="Интерактивные курсы HTML academy">
+            <img class="academy" src="img/partners/academy.svg" alt="Интерактивные курсы HTML academy">
           </a>
         </li>
         <li class="partners-item">
           <a class="partners-link link-barber" href="#">
-            <img class="barbershop" src="img/partners/barber.png" alt="Барбершоп Бородинский">
+            <img class="barbershop" src="img/partners/barber.svg" alt="Барбершоп Бородинский">
           </a>
         </li>
         <li class="partners-item">
           <a class="partners-link link-pink" href="#">
-            <img class="pink" src="img/partners/pink.png" alt="Магазин приложений для iOS и Android Pink">
+            <img class="pink" src="img/partners/pink.svg" alt="Магазин приложений для iOS и Android Pink">
           </a>
         </li>
         <li class="partners-item">
           <a class="partners-link link-mishka" href="#">
-            <img class="mishka" src="img/partners/mishka.png" alt="Магазин вязаных игрушек Mishka">
+            <img class="mishka" src="img/partners/mishka.svg" alt="Магазин вязаных игрушек Mishka">
           </a>
         </li>
       </ul>
@@ -165,7 +159,7 @@
     <section class="footer-contacts">
       <h2 class="visually-hidden">Наши контакты</h2>
       <div class="map-wrapper">
-        <img class="map-img" src="./img/map.png"
+        <img class="map-img" src="./img/adds/map.jpg"
           alt="Наш адрес: Санкт-Петербург, набережная реки Карповки дом 5, литера П">
       </div>
       <div class="map-google-container">
@@ -222,14 +216,16 @@
             <label class="visually-hidden" for="letter-name">
               Ваше имя
             </label>
-            <input class="name-field" id="letter-name" type="text" name="name" placeholder="Имя Фамилия">
+            <input class="name-field form-input" id="letter-name" type="text" name="name" placeholder="Имя Фамилия"
+              required>
           </div>
           <div class="mail">
             <p class="field-description field-description--mail">Ваш email:</p>
             <label class="visually-hidden" for="letter-mail">
               Ваша почта
             </label>
-            <input class="mail-field" id="letter-mail" type="email" name="login" placeholder="email@example.com">
+            <input class="mail-field form-input" id="letter-mail" type="text" name="login"
+              placeholder="email@example.com" required>
           </div>
           <div class="letter">
             <p class="field-description field-description--letter">Текст письма:</p>
@@ -237,17 +233,15 @@
               Напишите письмо здесь
             </label>
             <textarea class="free-text" id="letter-text" rows="10" cols="45" name="text"
-              placeholder="В свободной форме">
-        </textarea>
+              placeholder="В свободной форме"></textarea>
           </div>
         </div>
         <button class="button-letter" type="submit">Отправить</button>
       </form>
       <button class="modal-close" type="button" aria-label="Закрыть"></button>
-      </form>
     </div>
   </section>
-  <script src="./js/script.js"></script>
+  <script src="./js/script.min.js"></script>
 </body>
 
 </html>

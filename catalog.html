@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-  <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/normalize.min.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
   <title>HTML Academy: Нёрдс</title>
   <link rel="icon" href="favicon.ico">
 </head>
@@ -14,7 +14,7 @@
   <header class="main-header">
     <nav class="main-nav">
       <a class="header-logo header-logo-shop" href="index.html">
-        <img class="header-logo-img" src="img/nerds-logo.svg" width="160" height="65"
+        <img class="header-logo-img" src="img/adds/nerds-logo.svg" width="160" height="65"
           alt="Логотип интренет-магазина Нёрдс">
       </a>
       <div class="header-bar">
@@ -33,7 +33,7 @@
               <a class="nav-link" href="#">Контакты</a>
             </li>
           </ul>
-          <a class="nav-cart " href="#">Корзина</a>
+          <a class="nav-cart" href="#">Корзина</a>
         </div>
       </div>
     </nav>
@@ -259,7 +259,7 @@
     <section class="footer-contacts">
       <h2 class="visually-hidden">Наши контакты</h2>
       <div class="map-wrapper">
-        <img class="map-img" src="./img/map.png"
+        <img class="map-img" src="./img/adds/map.jpg"
           alt="Наш адрес: Санкт-Петербург, набережная реки Карповки дом 5, литера П">
       </div>
       <div class="map-google-container">
@@ -311,29 +311,37 @@
       <h2 class="form-header">Напишите нам</h2>
       <form class="letter-form" action="https://echo.htmlacademy.ru" method="post">
         <div class="field-input-container">
-          <div class="name-container">
-            <p class="field-description">Ваше имя:</p>
-            <label class="visually-hidden" for="letter-name">Ваше имя</label>
-            <input class="name-field" id="letter-name" type="text" name="name" placeholder="Имя Фамилия">
+          <div class="name">
+            <p class="field-description field-description--name">Ваше имя:</p>
+            <label class="visually-hidden" for="letter-name">
+              Ваше имя
+            </label>
+            <input class="name-field form-input" id="letter-name" type="text" name="name" placeholder="Имя Фамилия"
+              required>
           </div>
-          <div class="mail-container">
-            <p class="field-description">Ваш email:</p>
-            <label class="visually-hidden" for="letter-mail">Ваша почта</label>
-            <input class="mail-field" id="letter-mail" type="email" name="login" placeholder="email@example.com">
+          <div class="mail">
+            <p class="field-description field-description--mail">Ваш email:</p>
+            <label class="visually-hidden" for="letter-mail">
+              Ваша почта
+            </label>
+            <input class="mail-field form-input" id="letter-mail" type="text" name="login"
+              placeholder="email@example.com" required>
+          </div>
+          <div class="letter">
+            <p class="field-description field-description--letter">Текст письма:</p>
+            <label class="visually-hidden" for="letter-text">
+              Напишите письмо здесь
+            </label>
+            <textarea class="free-text" id="letter-text" rows="10" cols="45" name="text"
+              placeholder="В свободной форме"></textarea>
           </div>
         </div>
-        <p class="field-description">Текст письма:</p>
-        <label class="visually-hidden" for="letter-text">Напишите письмо здесь</label>
-        <textarea class="free-text" id="letter-text" rows="10" cols="45" name="text" placeholder="В свободной форме">
-        </textarea>
-
         <button class="button-letter" type="submit">Отправить</button>
       </form>
       <button class="modal-close" type="button" aria-label="Закрыть"></button>
-      </form>
     </div>
   </section>
-  <script src="./js/script.js"></script>
+  <script src="./js/script.min.js"></script>
 </body>
 
 </html>
