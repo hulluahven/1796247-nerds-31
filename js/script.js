@@ -1,21 +1,22 @@
-let sliderLinks = document.querySelectorAll(".slider-nav-link");
-let sortList = document.querySelector(".sort-list");
-let addressMailLink = document.querySelector(".address-mail-link");
-let modalLetter = document.querySelector(".modal-letter");
-let modalClose = document.querySelector(".modal-close");
-let nameField = document.querySelector(".name-field");
-let letterForm = document.querySelector(".letter-form");
-let mailField = document.querySelector(".mail-field");
-let directionList = document.querySelector(".direction-list");
-let directionButtons = document.querySelectorAll(".direction-link");
+const sliderLinks = document.querySelectorAll(".slider-navigation-link");
+const sortList = document.querySelector(".sort-list");
+const addressMailLink = document.querySelector(".address-mail-link");
+const modalLetter = document.querySelector(".modal-letter");
+const modalClose = document.querySelector(".modal-close");
+const nameField = document.querySelector(".name-field");
+const letterForm = document.querySelector(".letter-form");
+const mailField = document.querySelector(".mail-field");
+const directionList = document.querySelector(".direction-list");
+const directionButtons = document.querySelectorAll(".direction-link");
+const letterFormWrapper = document.querySelector(".form-wrapper");
 
 sliderLinks.forEach(function (el) {
     el.addEventListener("click", function (evt) {
         evt.preventDefault();
         document.querySelector(".slider-item--active").classList.remove("slider-item--active");
         document.querySelector("." + this.dataset.slider).classList.add("slider-item--active");
-        document.querySelector(".slider-nav-link--active").classList.remove("slider-nav-link--active");
-        this.classList.add("slider-nav-link--active");
+        document.querySelector(".slider-navigation-link--active").classList.remove("slider-navigation-link--active");
+        this.classList.add("slider-navigation-link--active");
     });
 
 });
@@ -30,6 +31,7 @@ if (directionButtons) {
 
         });
     });
+
 }
 
 if (sortList) {
@@ -55,7 +57,12 @@ if (modalClose) {
     modalClose.addEventListener("click", function (evt) {
         evt.preventDefault();
         modalLetter.classList.remove("modal--show");
+        letterFormWrapper.classList.remove("modal--error");
+        document.querySelectorAll(".error").forEach(function (el) {
+            el.classList.remove("error");
+        });
     });
+
 }
 
 nameField.required = false;
@@ -65,6 +72,10 @@ if (letterForm) {
     letterForm.addEventListener("submit", function (evt) {
         if (!nameField.value || !mailField.value) {
             evt.preventDefault();
+
+            letterFormWrapper.classList.remove("modal--error");
+            letterFormWrapper.offsetWidth = letterFormWrapper.offsetWidth;
+            letterFormWrapper.classList.add("modal--error");
 
             if (!nameField.value) {
                 nameField.classList.add("error");
@@ -87,5 +98,4 @@ if (letterForm) {
     });
 
 }
-
 

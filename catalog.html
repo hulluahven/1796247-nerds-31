@@ -12,28 +12,28 @@
 
 <body class="page-body inner-page">
   <header class="main-header">
-    <nav class="main-nav">
+    <nav class="main-navigation">
       <a class="header-logo header-logo-shop" href="index.html">
-        <img class="header-logo-img" src="img/adds/nerds-logo.svg" width="160" height="65"
+        <img class="header-logo-image" src="img/adds/nerds-logo.svg" width="160" height="65"
           alt="Логотип интренет-магазина Нёрдс">
       </a>
       <div class="header-bar">
-        <div class="main-nav-wrapper">
-          <ul class="nav-list">
-            <li class="nav-item ">
-              <a class="nav-link " href="#">Студия</a>
+        <div class="main-navigation-wrapper">
+          <ul class="navigation-list">
+            <li class="navigation-item ">
+              <a class="navigation-link " href="#">Студия</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Клиенты</a>
+            <li class="navigation-item">
+              <a class="navigation-link" href="#">Клиенты</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link nav-link--active" href="catalog.html">Магазин</a>
+            <li class="navigation-item">
+              <a class="navigation-link navigation-link--active" href="catalog.html">Магазин</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Контакты</a>
+            <li class="navigation-item">
+              <a class="navigation-link" href="#">Контакты</a>
             </li>
           </ul>
-          <a class="nav-cart" href="#">Корзина</a>
+          <a class="navigation-cart" href="#">Корзина</a>
         </div>
       </div>
     </nav>
@@ -55,14 +55,14 @@
                 <div class="scale">
                   <div class="bar"></div>
                 </div>
-                <div class="toggle toggle-min"></div>
-                <div class="toggle toggle-max"></div>
+                <a class="toggle toggle-minimum" aria-label="Установить минимальную цену" href="#"></a>
+                <a class="toggle toggle-maximum" aria-label="Установить максимальную цену" href="#"></a>
               </div>
               <div class="price-controls">
-                <label class="min-price">
+                <label class="minimum-price">
                   от <input type="text" name="min-price" value="0">
                 </label>
-                <label class="max-price">
+                <label class="maximum-price">
                   до <input type="text" name="max-price" value="150 000">
                 </label>
               </div>
@@ -94,40 +94,40 @@
               <li class="feature-item checkbox">
                 <input class="visually-hidden checkbox-input" type="checkbox" name="slider" id="filter-slider" checked>
                 <label class="checkbox-label" for="filter-slider">
-                  <em class="checkbox-spec"></em>
+                  <em class="checkbox-special"></em>
                   Слайдер
                 </label>
               </li>
               <li class="feature-item checkbox">
                 <input class="visually-hidden checkbox-input" type="checkbox" name="features" id="filter-features">
                 <label class="checkbox-label" for="filter-features">
-                  <em class="checkbox-spec"></em>
+                  <em class="checkbox-special"></em>
                   Блок преимуществ
                 </label>
               </li>
               <li class="feature-item checkbox">
                 <input class="visually-hidden checkbox-input" type="checkbox" name="news" id="filter-news" checked>
                 <label class="checkbox-label" for="filter-news">
-                  <em class="checkbox-spec"></em>
+                  <em class="checkbox-special"></em>
                   Новости
                 </label>
               </li>
               <li class="feature-item checkbox">
                 <input class="visually-hidden checkbox-input" type="checkbox" name="galery" id="filter-galery">
                 <label class="checkbox-label" for="filter-galery">
-                  <em class="checkbox-spec"></em>Галерея
+                  <em class="checkbox-special"></em>Галерея
                 </label>
               </li>
               <li class="feature-item checkbox">
                 <input class="visually-hidden checkbox-input" type="checkbox" name="cart" id="filter-cart">
                 <label class="checkbox-label" for="filter-cart">
-                  <em class="checkbox-spec"></em>
+                  <em class="checkbox-special"></em>
                   Корзина
                 </label>
               </li>
             </ul>
           </fieldset>
-          <button class="filter-btn" type="submit">Показать</button>
+          <button class="filter-button" type="submit">Показать</button>
         </form>
       </section>
       <section class="our-products">
@@ -167,8 +167,8 @@
         <ul class="product-list">
           <li class="product-item">
             <figure class="circle"></figure>
-            <figure class="product-img">
-              <img class="sedona-img" src="img/catalog/sedona.jpg" width="359" height="578"
+            <figure class="product-image">
+              <img class="sedona-image" src="img/catalog/sedona.jpg" width="359" height="578"
                 alt="Информационный сайт для туристов.">
             </figure>
             <div class="product-container">
@@ -179,8 +179,8 @@
           </li>
           <li class="product-item">
             <figure class="circle"></figure>
-            <figure class="product-img">
-              <img class="pink-img" src="img/catalog/pink.jpg" width="359" height="578"
+            <figure class="product-image">
+              <img class="pink-image" src="img/catalog/pink.jpg" width="359" height="578"
                 alt="Продуктовый лендинг приложений для iOS и Android.">
             </figure>
             <div class="product-container">
@@ -191,7 +191,7 @@
           </li>
           <li class="product-item">
             <figure class="circle"></figure>
-            <figure class="product-img">
+            <figure class="product-image">
               <img class="barbershop" src="img/catalog/barbershop.jpg" width="359" height="578"
                 alt="Сайт салона красоты для мужчин.">
             </figure>
@@ -203,7 +203,7 @@
           </li>
           <li class="product-item">
             <figure class="circle"></figure>
-            <figure class="product-img">
+            <figure class="product-image">
               <img class="mishka" src="img/catalog/mishka.jpg" width="359" height="578"
                 alt="Интернет-магазин вязаных игрушек">
             </figure>
@@ -215,7 +215,7 @@
           </li>
           <li class="product-item">
             <figure class="circle"></figure>
-            <figure class="product-img">
+            <figure class="product-image">
               <img class="a-plus" src="img/catalog/aplus.jpg" width="359" height="578"
                 alt="Лендинг курсов повышения квалификации">
             </figure>
@@ -227,7 +227,7 @@
           </li>
           <li class="product-item">
             <figure class="circle"></figure>
-            <figure class="product-img">
+            <figure class="product-image">
               <img class="kvast" src="img/catalog/kvast.jpg" width="359" height="578"
                 alt="Промо-сайт производителя крафтового кваса">
             </figure>
@@ -259,7 +259,7 @@
     <section class="footer-contacts">
       <h2 class="visually-hidden">Наши контакты</h2>
       <div class="map-wrapper">
-        <img class="map-img" src="./img/adds/map.jpg"
+        <img class="map-image" src="./img/adds/map.jpg" width="1440" height="416"
           alt="Наш адрес: Санкт-Петербург, набережная реки Карповки дом 5, литера П">
       </div>
       <div class="map-google-container">
@@ -275,8 +275,8 @@
           наб. Реки Карповки,<br>
           5 лит.П, Санкт-Петербург
         </address>
-        <a class="address-tel-link" href="tel:+78005558628">+7 800 555-86-28</a>
-        <a class="address-mail-link" href="#">Напишите нам</a>
+        <a class="address-phone-link" href="tel:+78005558628">+7 800 555-86-28</a>
+        <a class="address-mail-link" href="feedback.html">Напишите нам</a>
       </div>
       <figure class="marker"></figure>
     </section>
@@ -288,17 +288,17 @@
         </div>
         <ul class="social-list">
           <li class="social-item">
-            <a class="social-link link-vk" href="#">
+            <a class="social-link link-vkontakte" href="#">
               <span class="visually-hidden">Вконтакте</span>
             </a>
           </li>
           <li class="social-item">
-            <a class="social-link link-fb" href="#">
+            <a class="social-link link-facebook" href="#">
               <span class="visually-hidden">Фейсбук</span>
             </a>
           </li>
           <li class="social-item">
-            <a class="social-link link-inst" href="#">
+            <a class="social-link link-instagram" href="#">
               <span class="visually-hidden">Инстаграм</span>
             </a>
           </li>
